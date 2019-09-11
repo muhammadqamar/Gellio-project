@@ -1,0 +1,1174 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 navi-tabs__content" id="add-secure-message">
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0 content-pad-tb">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+            <a onclick="openDoc('messaging-doc')" href="#">Refer Developer Guide</a>
+            <div class="content-header-txt">// addSecureMessage()</div>
+            <div class="content-discription-txt content-description-pad-left">
+                Creates a new Secure Message entry.
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                <div class="content-header-txt" id="add-secure-message-parameter">
+                    Parameters
+                </div>
+                <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Required</th>
+                            <th>Data type</th>
+                            <th>Pattern</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>apiLogin</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>50 characters or less</p>
+
+                                <p>AbC123-9999</p>
+                            </td>
+                            <td>Provider's Web Service Username as provided and
+                                authenticated by Galileo for the requesting IP
+                                Address.</td>
+                        </tr>
+                        <tr>
+                            <td>apiTransKey</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>15 characters or less</p>
+
+                                <p>4sb62fh6w4h7w34g</p>
+                            </td>
+                            <td>Web Service Password as provided and authenticated
+                                by
+                                Galileo for the requesting IP Address.</td>
+                        </tr>
+                        <tr>
+                            <td>providerId</td>
+                            <td>Yes</td>
+                            <td>Integer</td>
+                            <td>
+                                <p>10 digits or less</p>
+
+                                <p>9999</p>
+                            </td>
+                            <td>Galileo issued unique Provider identifier.</td>
+                        </tr>
+                        <tr>
+                            <td>transactionId</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>60 characters or less</p>
+
+                                <p>9845dk-39fdk3fj3-4483483478</p>
+                            </td>
+                            <td>A unique system generated ID number that identifies
+                                the API
+                                transaction with Galileo Processing systems. A UUID
+                                is
+                                preferred. This must be different for each
+                                transaction.</td>
+                        </tr>
+                        <tr>
+                            <td>accountNo</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>PAN or PRN</p>
+
+                                <p>074103447228</p>
+                            </td>
+                            <td>Can be either a PAN (the 16 digit card number) or
+                                PRN (a
+                                unique 12 digit account identifier).</td>
+                        </tr>
+                        <tr>
+                            <td>msgSubject</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>Alphanumeric string including punctuation; maximum
+                                255
+                                characters account login help pls</td>
+                            <td>Secure message subject</td>
+                        </tr>
+                        <tr>
+                            <td>msgText</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>Alphanumeric string including punctuation;
+                                    maximum 4000
+                                    characters</p>
+
+                                <p>Please help me recover my password.</p>
+                            </td>
+                            <td>Secure message body text</td>
+                        </tr>
+                        <tr>
+                            <td>parentMsgId</td>
+                            <td>No</td>
+                            <td>Integer</td>
+                            <td>
+                                <p>Positive integer value</p>
+
+                                <p>483383</p>
+                            </td>
+                            <td>The msgId of the original cardholder message that
+                                you wish
+                                to respond to.</td>
+                        </tr>
+                        <tr>
+                            <td>locale</td>
+                            <td>No</td>
+                            <td>String</td>
+                            <td>
+                                <p>Accepted values = "en_US", "es_US", "fr_CA", and
+                                    "en_CA"
+                                </p>
+
+                                <p>en_US</p>
+                            </td>
+                            <td>Sets customer language preference. Default is
+                                "en_US".</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <img class="img-responsive" src="img/add-secure-message-parameter.png"> -->
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                <div class="content-header-txt" id="add-secure-message-status-code">
+                    Status
+                    codes </div>
+                <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Code description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>Success</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Invalid parameters</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Invalid customer account</td>
+                        </tr>
+                        <tr>
+                            <td>-1</td>
+                            <td>Indicates that the application record failed to
+                                update or
+                                return.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <img class="img-responsive" src="img/add-secure-message-status-code.png"> -->
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                <div class="content-header-txt" id="add-secure-message-response">
+                    Response
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                    <div id="response-container"
+                        class="container-fluid sticky-top method-response code-example mx-0 px-0"
+                        style="z-index: 0!important">
+
+
+
+                        <div class="code-toolbar">
+                            <pre class="row code-sample m-0 language-xml"
+                                style="overflow-x: auto!important; max-height: 35vh;">                    <code class=" language-xml">addSecureMessage() response example
+                                                    
+                                                    <span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+                                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>response</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status_code</span><span class="token punctuation">&gt;</span></span>0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status_code</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>system_timestamp</span><span class="token punctuation">&gt;</span></span>2011-10-07 10:25:07<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>system_timestamp</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>response_data</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_id</span><span class="token punctuation">&gt;</span></span>984181<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_id</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>response_data</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>processing_time</span><span class="token punctuation">&gt;</span></span>0.973<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>processing_time</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>echo</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>transaction_id</span><span class="token punctuation">&gt;</span></span>12345a<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>transaction_id</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>provider_transaction_id</span><span class="token punctuation">&gt;</span></span>77bb<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>provider_transaction_id</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>provider_timestamp</span><span class="token punctuation">&gt;</span></span>2013-02-06 10:10:10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>provider_timestamp</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>echo</span><span class="token punctuation">&gt;</span></span>
+                                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>response</span><span class="token punctuation">&gt;</span></span></code>
+                                                                    </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Response</th>
+                            <th>Description</th>
+                            <th>Example value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>status</td>
+                            <td>The condition of a process or response (such as
+                                embossed
+                                card, account, freeze, and so on).</td>
+                            <td>Success</td>
+                        </tr>
+                        <tr>
+                            <td>status_code</td>
+                            <td>The status of the response.</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>system_timestamp</td>
+                            <td>A system generated timestamp.</td>
+                            <td>2011-02-02 11:11:12</td>
+                        </tr>
+                        <tr>
+                            <td>response_data</td>
+                            <td>A structure for the response data. It can be empty
+                                but
+                                usually will contain information.</td>
+                            <td>&lt;response_data&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;new_account&gt;&nbsp;&nbsp;&nbsp;&lt;/new_account&gt;<br>
+                                &lt;/response_data&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>msg_id</td>
+                            <td>The ID assigned to a secure message.</td>
+                            <td>984181</td>
+                        </tr>
+                        <tr>
+                            <td>processing_time</td>
+                            <td>The time elapsed in processing the transaction.</td>
+                            <td>1.723</td>
+                        </tr>
+                        <tr>
+                            <td>echo</td>
+                            <td>A structure that displays transaction ID
+                                information.</td>
+                            <td>&lt;echo&gt;<br>
+                                &nbsp;&nbsp;&lt;transaction_id&gt;...&lt;/transaction_id&gt;<br>
+                                &nbsp;&nbsp;&lt;provider_transaction_id&gt;...&lt;/provider_transaction_id&gt;<br>
+                                &nbsp;&nbsp;&lt;provider_timestamp&gt;...&lt;/provider_timestamp&gt;<br>
+                                &lt;/echo&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>transaction_id</td>
+                            <td>A number that represents a transaction.</td>
+                            <td>12345a</td>
+                        </tr>
+                        <tr>
+                            <td>provider_transaction_id</td>
+                            <td>Secondary transaction identifier (generated by a
+                                provider).
+                            </td>
+                            <td>77bb</td>
+                        </tr>
+                        <tr>
+                            <td>provider_timestamp</td>
+                            <td>Store a related timestamp for reporting and
+                                troubleshooting
+                                purposes.</td>
+                            <td>2013-02-06 10:10:10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <img class="img-responsive" src="img/add-secure-message-response.png"> -->
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0" id="add-secure-message-code-snipet">
+            <div class="content-header-txt pad-top-20">Code Snippet</div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div id="createaccount-code-example" class="request-example code-example m-0 px-0 py-0">
+
+                <ul class="nav nav-tabs mar-left tabs-back">
+                    <li class="active"><a data-toggle="tab" href="#addSecureMessageCurl">Curl</a></li>
+                    <li><a data-toggle="tab" href="#addSecureMessagejava">Java</a></li>
+                    <li><a data-toggle="tab" href="#addSecureMessagepyhton">Python</a></li>
+                    <li><a data-toggle="tab" href="#addSecureMessagePHP">Php</a></li>
+                    <li><a data-toggle="tab" href="#addSecureMessageSharp">C#</a></li>
+                    <li><a data-toggle="tab" href="#addSecureMessageRuby">Ruby</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="addSecureMessageCurl" class="tab-pane fade in active">
+
+                        <div class="code-toolbar">
+                            <pre id="addsecuremessage-curl" class="row collapse show m-0 p-0 pl-3 language-bash"
+                                data-parent="#addsecuremessage-code-example">        <br><code class=" language-bash"><span class="token comment"># The following shell script will use cURL to call addSecureMessage and</span>
+        <span class="token comment"># print the full XML response</span>
+        
+        <span class="token function">curl</span> - v https://sandbox-api.gpsrv.com/intserv/4.0/addSecureMessage \ 
+        -d <span class="token string">'apiLogin= '</span> \ 
+        -d <span class="token string">'apiTransKey= '</span> \ 
+        -d <span class="token string">'providerId=550'</span> \ 
+        -d <span class="token string">'transactionId=40985-random-string-10473'</span> \ 
+        -d <span class="token string">'accountNo=074103447228'</span> \ 
+        -d <span class="token string">'msgSubject=account login help pls'</span> \ 
+        -d <span class="token string">'msgText=Please help me recover my password'</span> </code>
+            </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addSecureMessagejava" class="tab-pane fade in ">
+                        <div class="code-toolbar">
+                            <pre id="addsecuremessage-java" class="row collapse m-0 p-0 pl-3 language-java"
+                                data-parent="#addsecuremessage-code-example">        <br><code class=" language-java"><span class="token comment">// The following Java code will make a addSecureMessage call</span>
+                                                                                <span class="token comment">// and print the XML response.</span>
+                                                                                
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">BufferedReader</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">InputStreamReader</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">OutputStream</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">Reader</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span><span class="token class-name">HttpURLConnection</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span><span class="token class-name">MalformedURLException</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span>URL<span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span><span class="token class-name">URLEncoder</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span> <span class="token operator">*</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                <span class="token keyword">class</span> <span class="token class-name">GalileoAPICall</span>
+                                                                                <span class="token punctuation">{</span>
+                                                                                    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                                                                                            <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> params <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                           params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"apiLogin"</span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                           params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"apiTransKey"</span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                           params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"providerId"</span><span class="token punctuation">,</span> <span class="token string">"550"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                           params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"transactionId"</span><span class="token punctuation">,</span> <span class="token string">"40985-random-string-10473"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                           params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"accountNo"</span><span class="token punctuation">,</span> <span class="token string">"074103447228"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                           params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"msgSubject"</span><span class="token punctuation">,</span> <span class="token string">"account login help pls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                           params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"msgText"</span><span class="token punctuation">,</span> <span class="token string">"Please help me recover my password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            <span class="token class-name">StringBuilder</span> postData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Map</span><span class="token punctuation">.</span><span class="token class-name">Entry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> param <span class="token operator">:</span> params<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                                <span class="token keyword">if</span> <span class="token punctuation">(</span>postData<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'&amp;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                                postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">URLEncoder</span><span class="token punctuation">.</span><span class="token function">encode</span><span class="token punctuation">(</span>param<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                                postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                                postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">URLEncoder</span><span class="token punctuation">.</span><span class="token function">encode</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>param<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            <span class="token punctuation">}</span>
+                                                                                            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> postDataBytes <span class="token operator">=</span> postData<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                            <span class="token class-name">URL</span> url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">URL</span><span class="token punctuation">(</span><span class="token string">"https://sandbox-api.gpsrv.com/intserv/4.0/addSecureMessage"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                            <span class="token class-name">HttpURLConnection</span> conn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">HttpURLConnection</span><span class="token punctuation">)</span> url<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            conn<span class="token punctuation">.</span><span class="token function">setRequestMethod</span><span class="token punctuation">(</span><span class="token string">"POST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            conn<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Content-Type"</span><span class="token punctuation">,</span> <span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            conn<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Content-Length"</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>postDataBytes<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            conn<span class="token punctuation">.</span><span class="token function">setDoOutput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            conn<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>postDataBytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                            <span class="token class-name">String</span> xmlOutput<span class="token punctuation">;</span>
+                                                                                
+                                                                                            <span class="token class-name">Reader</span> in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">InputStreamReader</span><span class="token punctuation">(</span>conn<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">;</span> <span class="token punctuation">(</span>c <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                            <span class="token punctuation">}</span>
+                                                                                        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">MalformedURLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                        <span class="token punctuation">}</span>
+                                                                                    <span class="token punctuation">}</span>
+                                                                                <span class="token punctuation">}</span></code>
+                                                                                    </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addSecureMessagepyhton" class="tab-pane fade in ">
+                        <div class="code-toolbar">
+                            <pre id="addsecuremessage-python" class="row collapse m-0 p-0 pl-3 language-python"
+                                data-parent="#addsecuremessage-code-example">        <br><code class=" language-python"><span class="token comment"># The following Python code will make a addSecureMessage call</span>
+                                                                                <span class="token comment"># and print the response status code.</span>
+                                                                                
+                                                                                <span class="token keyword">import</span> requests
+                                                                                payload <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'apiLogin'</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">'apiTransKey'</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">'providerId'</span><span class="token punctuation">:</span> <span class="token string">'550'</span><span class="token punctuation">,</span> <span class="token string">'transactionId'</span><span class="token punctuation">:</span> <span class="token string">'40985-random-string-10473'</span><span class="token punctuation">,</span> <span class="token string">'accountNo'</span><span class="token punctuation">:</span> <span class="token string">'074103447228'</span><span class="token punctuation">,</span> <span class="token string">'msgSubject'</span><span class="token punctuation">:</span> <span class="token string">'account login help pls'</span><span class="token punctuation">,</span> <span class="token string">'msgText'</span><span class="token punctuation">:</span> <span class="token string">'Please help me recover my password'</span><span class="token punctuation">}</span>
+                                                                                r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token operator">=</span><span class="token string">'https://sandbox-api.gpsrv.com/intserv/4.0/addSecureMessage'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>payload<span class="token punctuation">,</span> headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'response-content-type'</span><span class="token punctuation">:</span> <span class="token string">'json'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                                                                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'addSecureMessage response code: '</span> <span class="token operator">+</span> r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'status_code'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                                                                                </code>
+                                                                                    </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addSecureMessagePHP" class="tab-pane fade in ">
+                        <div class="code-toolbar">
+                            <pre id="addsecuremessage-php" class="row collapse m-0 p-0 pl-3 language-php"
+                                data-parent="#addsecuremessage-code-example">        <br><code class=" language-php"><span class="token comment">// The following PHP code will make a addSecureMessage call</span>
+                                                                                <span class="token comment">// and echo the response status code.</span>
+                                                                                
+                                                                                <span class="token variable">$endpoint</span> <span class="token operator">=</span> <span class="token single-quoted-string string">'https://sandbox-api.gpsrv.com/intserv/4.0/addSecureMessage'</span><span class="token punctuation">;</span>
+                                                                                <span class="token variable">$params</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'apiLogin'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">' '</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'apiTransKey'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">' '</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'providerId'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'550'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'transactionId'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'40985-random-string-10473'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'accountNo'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'074103447228'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'msgSubject'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'account login help pls'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'msgText'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'Please help me recover my password'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                <span class="token variable">$curl</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_POST</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_POSTFIELDS</span><span class="token punctuation">,</span> <span class="token variable">$params</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token variable">$endpoint</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_RETURNTRANSFER</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token function">curl_exec</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token function">curl_close</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$result</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token variable">$statusCode</span> <span class="token operator">=</span> <span class="token punctuation">(</span>string<span class="token punctuation">)</span> <span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">status_code</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">echo</span> <span class="token double-quoted-string string">"method response status code=<span class="token interpolation"><span class="token punctuation">{</span><span class="token variable">$statusCode</span><span class="token punctuation">}</span></span>"</span><span class="token punctuation">;</span>
+                                                                                </code>
+                                                                                    </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addSecureMessageSharp" class="tab-pane fade in ">
+
+                        <div class="code-toolbar">
+                            <pre id="addsecuremessage-csharp" class="row collapse m-0 p-0 pl-3 language-csharp"
+                                data-parent="#addsecuremessage-code-example">        <br><code class=" language-csharp"><span class="token comment">// The following C# code will make a addSecureMessage call</span>
+                                                                                <span class="token comment">// and echo the response status code.</span>
+                                                                                
+                                                                                <span class="token keyword">using</span> System<span class="token punctuation">.</span>IO<span class="token punctuation">;</span>
+                                                                                <span class="token keyword">using</span> System<span class="token punctuation">.</span>Net<span class="token punctuation">;</span>
+                                                                                <span class="token keyword">using</span> System<span class="token punctuation">.</span>Xml<span class="token punctuation">;</span>
+                                                                                
+                                                                                <span class="token keyword">string</span> sEndPoint <span class="token operator">=</span> <span class="token string">"https://sandbox-api.gpsrv.com/intserv/4.0/addSecureMessage"</span>
+                                                                                <span class="token keyword">string</span> sAPICall <span class="token operator">=</span> <span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">Format</span><span class="token punctuation">(</span><span class="token string">"{0}?apiLogin{1}&amp;apiTransKey{2}&amp;providerId{3}&amp;transactionId{4}&amp;accountNo{5}&amp;msgSubject{6}&amp;msgText{7}"</span><span class="token punctuation">,</span> sEndPoint<span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">"550"</span><span class="token punctuation">,</span> <span class="token string">"40985-random-string-10473"</span><span class="token punctuation">,</span> <span class="token string">"074103447228"</span><span class="token punctuation">,</span> <span class="token string">"account login help pls"</span><span class="token punctuation">,</span> <span class="token string">"Please help me recover my password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                <span class="token keyword">string</span> sResponse <span class="token operator">=</span> <span class="token function">HttpGet</span><span class="token punctuation">(</span>sAPICall<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token class-name">XmlDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XmlDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                doc<span class="token punctuation">.</span><span class="token function">LoadXml</span><span class="token punctuation">(</span>sResponse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token class-name">XmlNode</span> xmlAPIResponse <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">SelectSingleNode</span><span class="token punctuation">(</span><span class="token string">"response"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                <span class="token class-name">HttpWebRequest</span> req <span class="token operator">=</span> WebRequest<span class="token punctuation">.</span><span class="token function">Create</span><span class="token punctuation">(</span>sAPICall<span class="token punctuation">)</span><span class="token keyword">as</span> HttpWebRequest<span class="token punctuation">;</span>
+                                                                                <span class="token keyword">string</span> sResponse <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+                                                                                <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name">HttpWebResponse</span> resp <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">GetResponse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">as</span> HttpWebResponse<span class="token punctuation">)</span>
+                                                                                <span class="token punctuation">{</span>
+                                                                                    <span class="token class-name">StreamReader</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StreamReader</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span><span class="token function">GetResponseStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    sResponse <span class="token operator">=</span> reader<span class="token punctuation">.</span><span class="token function">ReadToEnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token punctuation">}</span>
+                                                                                <span class="token class-name">XmlDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XmlDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                doc<span class="token punctuation">.</span><span class="token function">LoadXml</span><span class="token punctuation">(</span>sResponse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token class-name">XmlNode</span> xmlAPIResponse <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">SelectSingleNode</span><span class="token punctuation">(</span><span class="token string">"response"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                
+                                                                                Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">Format</span><span class="token punctuation">(</span><span class="token string">"{0} response code = {1}"</span><span class="token punctuation">,</span> sMethodName<span class="token punctuation">,</span> xmlAPIResponse<span class="token punctuation">.</span>FirstChild<span class="token punctuation">.</span>InnerText<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>
+                                                                                    </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addSecureMessageRuby" class="tab-pane fade in ">
+                        <div class="code-toolbar">
+                            <pre id="addsecuremessage-ruby" class="row collapse m-0 p-0 pl-3 language-ruby"
+                                data-parent="#addsecuremessage-code-example">        <br><code class=" language-ruby"><span class="token comment"># The following Ruby code will make a addSecureMessage call</span>
+                                                                                <span class="token comment"># and print the response status code.</span>
+                                                                                
+                                                                                <span class="token keyword">require</span> <span class="token string">'uri'</span>
+                                                                                <span class="token keyword">require</span> <span class="token string">'securerandom'</span>
+                                                                                <span class="token keyword">require</span> <span class="token string">'nokogiri'</span>
+                                                                                
+                                                                                uri <span class="token operator">=</span> <span class="token constant">URI</span><span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">"https://sandbox-api.gpsrv.com/intserv/4.0/addSecureMessage"</span><span class="token punctuation">)</span>
+                                                                                http <span class="token operator">=</span> <span class="token constant">Net</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">HTTP</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span>uri<span class="token punctuation">.</span>host<span class="token punctuation">,</span> uri<span class="token punctuation">.</span>port<span class="token punctuation">)</span>
+                                                                                
+                                                                                http <span class="token operator">=</span> <span class="token constant">Net</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">HTTP</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span>uri<span class="token punctuation">.</span>host<span class="token punctuation">,</span> uri<span class="token punctuation">.</span>port<span class="token punctuation">)</span>
+                                                                                request<span class="token punctuation">.</span>set_form_data<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"apiLogin"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">"apiTransKey"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">"providerId"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"550"</span><span class="token punctuation">,</span> <span class="token string">"transactionId"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"40985-random-string-10473"</span><span class="token punctuation">,</span> <span class="token string">"accountNo"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"074103447228"</span><span class="token punctuation">,</span> <span class="token string">"msgSubject"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"account login help pls"</span><span class="token punctuation">,</span> <span class="token string">"msgText"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"Please help me recover my password"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                                                                response <span class="token operator">=</span> http<span class="token punctuation">.</span>request<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+                                                                                
+                                                                                xml_doc <span class="token operator">=</span> <span class="token constant">Nokogiri</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">Slop</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+                                                                                puts<span class="token punctuation">(</span>xml_doc<span class="token punctuation">.</span>response<span class="token punctuation">.</span>status_code<span class="token punctuation">.</span>content<span class="token punctuation">)</span></code>
+                                                                                    </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 stick-sidebar">
+        <div class="overview-pad-tb">
+        <a class="overview-txt overview-txt-clicked" href="#add-secure-message-parameter">Parameters</a><br>
+        <a class="overview-txt" href="#add-secure-message-status-code">Status
+            codes</a><br>
+        <a class="overview-txt" href="#add-secure-message-response">Response</a><br>
+        <a class="overview-txt" href="#add-secure-message-code-snipet">Code Snipet</a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span class="Feedback-txt">Feedback</span></div>
+            </div>
+    </div>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 navi-tabs__content" id="retrieve-secure-message">
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0 content-pad-tb">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+
+            <div class="content-header-txt">// getSecureMessages()</div>
+            <div class="content-discription-txt content-description-pad-left">
+                Returns a list of secure messages that occurred during a specified
+                time
+                period.
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                <div class="content-header-txt" id="retrieve-secure-message-parameter">
+                    Parameters </div>
+                <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Required</th>
+                            <th>Data type</th>
+                            <th>Pattern</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>apiLogin</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>50 characters or less</p>
+
+                                <p>AbC123-9999</p>
+                            </td>
+                            <td>Provider's Web Service Username as provided and
+                                authenticated by Galileo for the requesting IP
+                                Address.</td>
+                        </tr>
+                        <tr>
+                            <td>apiTransKey</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>15 characters or less</p>
+
+                                <p>4sb62fh6w4h7w34g</p>
+                            </td>
+                            <td>Web Service Password as provided and authenticated
+                                by
+                                Galileo for the requesting IP Address.</td>
+                        </tr>
+                        <tr>
+                            <td>providerId</td>
+                            <td>Yes</td>
+                            <td>Integer</td>
+                            <td>
+                                <p>10 digits or less</p>
+
+                                <p>9999</p>
+                            </td>
+                            <td>Galileo issued unique Provider identifier.</td>
+                        </tr>
+                        <tr>
+                            <td>transactionId</td>
+                            <td>Yes</td>
+                            <td>String</td>
+                            <td>
+                                <p>60 characters or less</p>
+
+                                <p>9845dk-39fdk3fj3-4483483478</p>
+                            </td>
+                            <td>A unique system generated ID number that identifies
+                                the API
+                                transaction with Galileo Processing systems. A UUID
+                                is
+                                preferred. This must be different for each
+                                transaction.</td>
+                        </tr>
+                        <tr>
+                            <td>accountNo</td>
+                            <td>Yes</td>
+                            <td>String
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>PAN or PRN</p>
+
+                                <p>074103447228</p>
+                            </td>
+                            <td>Can be either a PAN (the 16 digit card number) or
+                                PRN (a
+                                unique 12 digit account identifier).</td>
+                        </tr>
+                        <tr>
+                            <td>startDate</td>
+                            <td>Yes</td>
+                            <td>Date</td>
+                            <td>
+                                <p>YYYY-MM-DD</p>
+
+                                <p>2016-01-01</p>
+                            </td>
+                            <td>The beginning date for the date range.</td>
+                        </tr>
+                        <tr>
+                            <td>endDate</td>
+                            <td>Yes</td>
+                            <td>Date</td>
+                            <td>
+                                <p>YYYY-MM-DD</p>
+
+                                <p>2016-02-01</p>
+                            </td>
+                            <td>The end date for the date range; must be greater
+                                than or
+                                equal to the startDate.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <img class="img-responsive" src="img/retrieve-secure-message-parameter.png"> -->
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                <div class="content-header-txt" id="retrieve-secure-message-status-code">
+                    Status codes </div>
+                <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Code description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>Success</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Invalid parameters</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Invalid customer account</td>
+                        </tr>
+                        <tr>
+                            <td>-1</td>
+                            <td>Indicates that the application record failed to
+                                update or
+                                return.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <img class="img-responsive"
+                                                                    src="img/retrieve-secure-message-status-code.png"> -->
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                <div class="content-header-txt" id="retrieve-secure-message-response">
+                    Response </div>
+
+                <div class="col-md-12 col-sm-12 pad-l-r-0">
+                    <div id="response-container"
+                        class="container-fluid sticky-top method-response code-example mx-0 px-0"
+                        style="z-index: 0!important">
+
+
+
+                        <div class="code-toolbar">
+                            <pre class="row code-sample m-0 language-xml"
+                                style="overflow-x: auto!important; max-height: 35vh;">                    <code class=" language-xml">getSecureMessages() response example
+                                                
+                                                <span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+                                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>response</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status_code</span><span class="token punctuation">&gt;</span></span>0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status_code</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>system_timestamp</span><span class="token punctuation">&gt;</span></span>2011-10-07 12:50:35<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>system_timestamp</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>response_data</span><span class="token punctuation">&gt;</span></span>
+                                                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>conversations</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>conversation</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_id</span><span class="token punctuation">&gt;</span></span>984181<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_id</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_subject</span><span class="token punctuation">&gt;</span></span>Account<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_subject</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_dt</span><span class="token punctuation">&gt;</span></span>2011-10-07 10:25:07<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_dt</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span><span class="token punctuation">&gt;</span></span>R<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>response_dt</span><span class="token punctuation">&gt;</span></span>2011-10-07 12:22:22<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>response_dt</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>locale</span><span class="token punctuation">&gt;</span></span>en_US<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>locale</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_text</span><span class="token punctuation">&gt;</span></span>Dude<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_text</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>replies</span><span class="token punctuation">&gt;</span></span>
+                                                           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reply</span><span class="token punctuation">&gt;</span></span>
+                                                             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_id</span><span class="token punctuation">&gt;</span></span>984182<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_id</span><span class="token punctuation">&gt;</span></span>
+                                                             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_subject</span><span class="token punctuation">&gt;</span></span>RE: Account<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_subject</span><span class="token punctuation">&gt;</span></span>
+                                                             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_dt</span><span class="token punctuation">&gt;</span></span>2011-10-07 12:22:22<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_dt</span><span class="token punctuation">&gt;</span></span>
+                                                             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span><span class="token punctuation">&gt;</span></span>N<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>status</span><span class="token punctuation">&gt;</span></span>
+                                                             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cs_agent</span><span class="token punctuation">&gt;</span></span>jsmith<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cs_agent</span><span class="token punctuation">&gt;</span></span>
+                                                             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>locale</span><span class="token punctuation">&gt;</span></span>en_US<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>locale</span><span class="token punctuation">&gt;</span></span>
+                                                             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msg_text</span><span class="token punctuation">&gt;</span></span>My Message<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msg_text</span><span class="token punctuation">&gt;</span></span>
+                                                           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>reply</span><span class="token punctuation">&gt;</span></span>
+                                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>replies</span><span class="token punctuation">&gt;</span></span>
+                                                       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>conversation</span><span class="token punctuation">&gt;</span></span>
+                                                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>conversations</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>response_data</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>processing_time</span><span class="token punctuation">&gt;</span></span>0.122<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>processing_time</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>echo</span><span class="token punctuation">&gt;</span></span>
+                                                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>transaction_id</span><span class="token punctuation">&gt;</span></span>12345a<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>transaction_id</span><span class="token punctuation">&gt;</span></span>
+                                                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>provider_transaction_id</span><span class="token punctuation">&gt;</span></span>77bb<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>provider_transaction_id</span><span class="token punctuation">&gt;</span></span>
+                                                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>provider_timestamp</span><span class="token punctuation">&gt;</span></span>2013-02-06 10:10:10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>provider_timestamp</span><span class="token punctuation">&gt;</span></span>
+                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>echo</span><span class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>response</span><span class="token punctuation">&gt;</span></span></code>
+                                                                </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Response</th>
+                            <th>Description</th>
+                            <th>Example value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>status</td>
+                            <td>The condition of a process or response (such as
+                                embossed
+                                card, account, freeze, and so on).</td>
+                            <td>Success</td>
+                        </tr>
+                        <tr>
+                            <td>status_code
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>The status of the response.</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>system_timestamp</td>
+                            <td>A system generated timestamp.</td>
+                            <td>2011-02-02 11:11:12</td>
+                        </tr>
+                        <tr>
+                            <td>response_data</td>
+                            <td>A structure for the response data. It can be empty
+                                but
+                                usually will contain information.</td>
+                            <td>&lt;response_data&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;new_account&gt;&nbsp;&nbsp;&nbsp;&lt;/new_account&gt;<br>
+                                &lt;/response_data&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>conversations</td>
+                            <td>A data structure that contains information on one or
+                                more
+                                secure messaging conversations.</td>
+                            <td>&lt;conversations&gt;<br>
+                                &nbsp;&nbsp;&lt;conversation&gt;<br>
+                                &nbsp;&nbsp;x<br>
+                                &nbsp;&nbsp;&lt;/conversation&gt;<br>
+                                &lt;/conversations&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>conversation</td>
+                            <td>A data structure that contains the information
+                                associated
+                                with a secure message.</td>
+                            <td>&lt;conversation&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_id&gt;984181&lt;/msg_id&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_subject&gt;Account&lt;/msg_subject&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_dt&gt;2011-10-07
+                                10:25:07&lt;/msg_dt&gt;<br>
+                                &nbsp;&nbsp;&lt;status&gt;R&lt;/status&gt;<br>
+                                &nbsp;&nbsp;&lt;response_dt&gt;2011-10-07
+                                12:22:22&lt;/response_dt&gt;<br>
+                                &nbsp;&nbsp;&lt;locale&gt;en_US&lt;/locale&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_text&gt;Dude&lt;/msg_text&gt;<br>
+                                &nbsp;&nbsp;&lt;replies&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;reply&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;msg_id&gt;984182&lt;/msg_id&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;msg_subject&gt;RE:
+                                Account&lt;/msg_subject&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;msg_dt&gt;2011-10-07
+                                12:22:22&lt;/msg_dt&gt;
+                                &nbsp;&nbsp;&nbsp;&lt;status&gt;N&lt;/status&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;cs_agent&gt;jsmith&lt;/cs_agent&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;locale&gt;en_US&lt;/locale&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;msg_text&gt;My
+                                Message&lt;/msg_text&gt;<br>
+                                &nbsp;&nbsp;&lt;/reply&gt;<br>
+                                &nbsp;&nbsp;&lt;/replies&gt;<br>
+                                &lt;/conversation&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>msg_id</td>
+                            <td>The msgId of the retrieved cardholder message.</td>
+                            <td>984181</td>
+                        </tr>
+                        <tr>
+                            <td>msg_subject</td>
+                            <td>The subject of a secure message.</td>
+                            <td>Account</td>
+                        </tr>
+                        <tr>
+                            <td>msg_dt</td>
+                            <td>The date a secure message was received.</td>
+                            <td>2018-10-07 10:25:07</td>
+                        </tr>
+                        <tr>
+                            <td>status</td>
+                            <td>The read status of a secure message.</td>
+                            <td>R</td>
+                        </tr>
+                        <tr>
+                            <td>response_dt</td>
+                            <td>The date of a response to the secure message.</td>
+                            <td>2018-10-07 12:22:22</td>
+                        </tr>
+                        <tr>
+                            <td>locale</td>
+                            <td>Language code in use locally.</td>
+                            <td>en_US</td>
+                        </tr>
+                        <tr>
+                            <td>msg_text</td>
+                            <td>The content of a secure message.</td>
+                            <td>April 10 is the last occurrence.</td>
+                        </tr>
+                        <tr>
+                            <td>replies</td>
+                            <td>A data structure that contains information on one or
+                                more
+                                secure message replies.</td>
+                            <td>&lt;reply&gt;<br>
+                                &nbsp;&nbsp;X<br>
+                                &lt;/reply&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>reply</td>
+                            <td>A data structure that contains the content of a
+                                reply to a
+                                secure message.</td>
+                            <td>&lt;reply&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_id&gt;984182&lt;/msg_id&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_subject&gt;RE:
+                                Account&lt;/msg_subject&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_dt&gt;2011-10-07
+                                12:22:22&lt;/msg_dt&gt;<br>
+                                &nbsp;&nbsp;&lt;status&gt;N&lt;/status&gt;<br>
+                                &nbsp;&nbsp;&lt;cs_agent&gt;jsmith&lt;/cs_agent&gt;<br>
+                                &nbsp;&nbsp;&lt;locale&gt;en_US&lt;/locale&gt;<br>
+                                &nbsp;&nbsp;&lt;msg_text&gt;My
+                                Message&lt;/msg_text&gt;<br>
+                                &lt;/reply&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>cs_agent</td>
+                            <td>The originator of a reply to a secure message.</td>
+                            <td>jsmith</td>
+                        </tr>
+                        <tr>
+                            <td>processing_time</td>
+                            <td>The time elapsed in processing the transaction.</td>
+                            <td>1.723</td>
+                        </tr>
+                        <tr>
+                            <td>echo</td>
+                            <td>A structure that displays transaction ID
+                                information.</td>
+                            <td>&lt;echo&gt;<br>
+                                &nbsp;&nbsp;&lt;transaction_id&gt;...&lt;/transaction_id&gt;<br>
+                                &nbsp;&nbsp;&lt;provider_transaction_id&gt;...&lt;/provider_transaction_id&gt;<br>
+                                &nbsp;&nbsp;&lt;provider_timestamp&gt;...&lt;/provider_timestamp&gt;<br>
+                                &lt;/echo&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>transaction_id</td>
+                            <td>A number that represents a transaction.</td>
+                            <td>12345a</td>
+                        </tr>
+                        <tr>
+                            <td>provider_transaction_id</td>
+                            <td>Secondary transaction identifier (generated by a
+                                provider).
+                            </td>
+                            <td>77bb</td>
+                        </tr>
+                        <tr>
+                            <td>provider_timestamp</td>
+                            <td>Store a related timestamp for reporting and
+                                troubleshooting
+                                purposes.</td>
+                            <td>2013-02-06 10:10:10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <img class="img-responsive" src="img/retrieve-secure-message-response.png"> -->
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0" id="retrieve-secure-message-code-snipet">
+            <div class="content-header-txt pad-top-20">Code Snippet</div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div id="createaccount-code-example" class="request-example code-example m-0 px-0 py-0">
+
+                <ul class="nav nav-tabs mar-left tabs-back">
+                    <li class="active"><a data-toggle="tab" href="#getSecureMessagesCurl">Curl</a></li>
+                    <li><a data-toggle="tab" href="#getSecureMessagesjava">Java</a></li>
+                    <li><a data-toggle="tab" href="#getSecureMessagespyhton">Python</a></li>
+                    <li><a data-toggle="tab" href="#getSecureMessagesPHP">Php</a></li>
+                    <li><a data-toggle="tab" href="#getSecureMessagesSharp">C#</a></li>
+                    <li><a data-toggle="tab" href="#getSecureMessagesRuby">Ruby</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="getSecureMessagesCurl" class="tab-pane fade in active">
+                        <div class="code-toolbar">
+                            <pre id="getsecuremessages-curl" class="row collapse show m-0 p-0 pl-3 language-bash"
+                                data-parent="#getsecuremessages-code-example">        <br><code class=" language-bash"><span class="token comment"># The following shell script will use cURL to call getSecureMessages and</span>
+                                                                        <span class="token comment"># print the full XML response</span>
+                                                                        
+                                                                        <span class="token function">curl</span> - v https://sandbox-api.gpsrv.com/intserv/4.0/getSecureMessages \ 
+                                                                        -d <span class="token string">'apiLogin= '</span> \ 
+                                                                        -d <span class="token string">'apiTransKey= '</span> \ 
+                                                                        -d <span class="token string">'providerId=550'</span> \ 
+                                                                        -d <span class="token string">'transactionId=40985-random-string-10473'</span> \ 
+                                                                        -d <span class="token string">'accountNo=074103447228'</span> \ 
+                                                                        -d <span class="token string">'startDate=2018-10-01'</span> \ 
+                                                                        -d <span class="token string">'endDate=2018-11-01'</span> </code>
+                                                                            </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="getSecureMessagesjava" class="tab-pane fade in ">
+                        <div class="code-toolbar">
+                            <pre id="getsecuremessages-java" class="row collapse m-0 p-0 pl-3 language-java"
+                                data-parent="#getsecuremessages-code-example">        <br><code class=" language-java"><span class="token comment">// The following Java code will make a getSecureMessages call</span>
+                                                                        <span class="token comment">// and print the XML response.</span>
+                                                                        
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">BufferedReader</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">InputStreamReader</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">OutputStream</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">Reader</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span><span class="token class-name">HttpURLConnection</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span><span class="token class-name">MalformedURLException</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span>URL<span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net</span><span class="token punctuation">.</span><span class="token class-name">URLEncoder</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span> <span class="token operator">*</span><span class="token punctuation">;</span>
+                                                                        
+                                                                        <span class="token keyword">class</span> <span class="token class-name">GalileoAPICall</span>
+                                                                        <span class="token punctuation">{</span>
+                                                                            <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                                                                                    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> params <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                   params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"apiLogin"</span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                   params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"apiTransKey"</span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                   params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"providerId"</span><span class="token punctuation">,</span> <span class="token string">"550"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                   params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"transactionId"</span><span class="token punctuation">,</span> <span class="token string">"40985-random-string-10473"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                   params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"accountNo"</span><span class="token punctuation">,</span> <span class="token string">"074103447228"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                   params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"startDate"</span><span class="token punctuation">,</span> <span class="token string">"2018-10-01"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                   params<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"endDate"</span><span class="token punctuation">,</span> <span class="token string">"2018-11-01"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    <span class="token class-name">StringBuilder</span> postData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Map</span><span class="token punctuation">.</span><span class="token class-name">Entry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> param <span class="token operator">:</span> params<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                        <span class="token keyword">if</span> <span class="token punctuation">(</span>postData<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'&amp;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                        postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">URLEncoder</span><span class="token punctuation">.</span><span class="token function">encode</span><span class="token punctuation">(</span>param<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                        postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                        postData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">URLEncoder</span><span class="token punctuation">.</span><span class="token function">encode</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>param<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    <span class="token punctuation">}</span>
+                                                                                    <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> postDataBytes <span class="token operator">=</span> postData<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        
+                                                                                    <span class="token class-name">URL</span> url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">URL</span><span class="token punctuation">(</span><span class="token string">"https://sandbox-api.gpsrv.com/intserv/4.0/getSecureMessages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        
+                                                                                    <span class="token class-name">HttpURLConnection</span> conn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">HttpURLConnection</span><span class="token punctuation">)</span> url<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    conn<span class="token punctuation">.</span><span class="token function">setRequestMethod</span><span class="token punctuation">(</span><span class="token string">"POST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    conn<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Content-Type"</span><span class="token punctuation">,</span> <span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    conn<span class="token punctuation">.</span><span class="token function">setRequestProperty</span><span class="token punctuation">(</span><span class="token string">"Content-Length"</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>postDataBytes<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    conn<span class="token punctuation">.</span><span class="token function">setDoOutput</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    conn<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>postDataBytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        
+                                                                                    <span class="token class-name">String</span> xmlOutput<span class="token punctuation">;</span>
+                                                                        
+                                                                                    <span class="token class-name">Reader</span> in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">InputStreamReader</span><span class="token punctuation">(</span>conn<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">;</span> <span class="token punctuation">(</span>c <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                    <span class="token punctuation">}</span>
+                                                                                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">MalformedURLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                                                                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                                <span class="token punctuation">}</span>
+                                                                            <span class="token punctuation">}</span>
+                                                                        <span class="token punctuation">}</span></code>
+                                                                            </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="getSecureMessagespyhton" class="tab-pane fade in ">
+
+                        <div class="code-toolbar">
+                            <pre id="getsecuremessages-python" class="row collapse m-0 p-0 pl-3 language-python"
+                                data-parent="#getsecuremessages-code-example">        <br><code class=" language-python"><span class="token comment"># The following Python code will make a getSecureMessages call</span>
+        <span class="token comment"># and print the response status code.</span>
+        
+        <span class="token keyword">import</span> requests
+        payload <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'apiLogin'</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">'apiTransKey'</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">'providerId'</span><span class="token punctuation">:</span> <span class="token string">'550'</span><span class="token punctuation">,</span> <span class="token string">'transactionId'</span><span class="token punctuation">:</span> <span class="token string">'40985-random-string-10473'</span><span class="token punctuation">,</span> <span class="token string">'accountNo'</span><span class="token punctuation">:</span> <span class="token string">'074103447228'</span><span class="token punctuation">,</span> <span class="token string">'startDate'</span><span class="token punctuation">:</span> <span class="token string">'2018-10-01'</span><span class="token punctuation">,</span> <span class="token string">'endDate'</span><span class="token punctuation">:</span> <span class="token string">'2018-11-01'</span><span class="token punctuation">}</span>
+        r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token operator">=</span><span class="token string">'https://sandbox-api.gpsrv.com/intserv/4.0/getSecureMessages'</span><span class="token punctuation">,</span> data<span class="token operator">=</span>payload<span class="token punctuation">,</span> headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'response-content-type'</span><span class="token punctuation">:</span> <span class="token string">'json'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'getSecureMessages response code: '</span> <span class="token operator">+</span> r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'status_code'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        </code>
+            </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="getSecureMessagesPHP" class="tab-pane fade in ">
+
+                        <div class="code-toolbar">
+                            <pre id="getsecuremessages-php" class="row collapse m-0 p-0 pl-3 language-php"
+                                data-parent="#getsecuremessages-code-example">        <br><code class=" language-php"><span class="token comment">// The following PHP code will make a getSecureMessages call</span>
+        <span class="token comment">// and echo the response status code.</span>
+        
+        <span class="token variable">$endpoint</span> <span class="token operator">=</span> <span class="token single-quoted-string string">'https://sandbox-api.gpsrv.com/intserv/4.0/getSecureMessages'</span><span class="token punctuation">;</span>
+        <span class="token variable">$params</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'apiLogin'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">' '</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'apiTransKey'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">' '</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'providerId'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'550'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'transactionId'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'40985-random-string-10473'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'accountNo'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'074103447228'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'startDate'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'2018-10-01'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'endDate'</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token single-quoted-string string">'2018-11-01'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token variable">$curl</span> <span class="token operator">=</span> <span class="token function">curl_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_POST</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_POSTFIELDS</span><span class="token punctuation">,</span> <span class="token variable">$params</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_URL</span><span class="token punctuation">,</span> <span class="token variable">$endpoint</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">curl_setopt</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">,</span> <span class="token constant">CURLOPT_RETURNTRANSFER</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token function">curl_exec</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">curl_close</span><span class="token punctuation">(</span><span class="token variable">$curl</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$xml</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleXMLElement</span><span class="token punctuation">(</span><span class="token variable">$result</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$statusCode</span> <span class="token operator">=</span> <span class="token punctuation">(</span>string<span class="token punctuation">)</span> <span class="token variable">$xml</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">status_code</span><span class="token punctuation">;</span>
+        <span class="token keyword">echo</span> <span class="token double-quoted-string string">"method response status code=<span class="token interpolation"><span class="token punctuation">{</span><span class="token variable">$statusCode</span><span class="token punctuation">}</span></span>"</span><span class="token punctuation">;</span>
+        </code>
+            </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="getSecureMessagesSharp" class="tab-pane fade in ">
+                        <div class="code-toolbar">
+                            <pre id="getsecuremessages-csharp" class="row collapse m-0 p-0 pl-3 language-csharp"
+                                data-parent="#getsecuremessages-code-example">        <br><code class=" language-csharp"><span class="token comment">// The following C# code will make a getSecureMessages call</span>
+                                                                        <span class="token comment">// and echo the response status code.</span>
+                                                                        
+                                                                        <span class="token keyword">using</span> System<span class="token punctuation">.</span>IO<span class="token punctuation">;</span>
+                                                                        <span class="token keyword">using</span> System<span class="token punctuation">.</span>Net<span class="token punctuation">;</span>
+                                                                        <span class="token keyword">using</span> System<span class="token punctuation">.</span>Xml<span class="token punctuation">;</span>
+                                                                        
+                                                                        <span class="token keyword">string</span> sEndPoint <span class="token operator">=</span> <span class="token string">"https://sandbox-api.gpsrv.com/intserv/4.0/getSecureMessages"</span>
+                                                                        <span class="token keyword">string</span> sAPICall <span class="token operator">=</span> <span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">Format</span><span class="token punctuation">(</span><span class="token string">"{0}?apiLogin{1}&amp;apiTransKey{2}&amp;providerId{3}&amp;transactionId{4}&amp;accountNo{5}&amp;startDate{6}&amp;endDate{7}"</span><span class="token punctuation">,</span> sEndPoint<span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">"550"</span><span class="token punctuation">,</span> <span class="token string">"40985-random-string-10473"</span><span class="token punctuation">,</span> <span class="token string">"074103447228"</span><span class="token punctuation">,</span> <span class="token string">"2018-10-01"</span><span class="token punctuation">,</span> <span class="token string">"2018-11-01"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        
+                                                                        <span class="token keyword">string</span> sResponse <span class="token operator">=</span> <span class="token function">HttpGet</span><span class="token punctuation">(</span>sAPICall<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        <span class="token class-name">XmlDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XmlDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        doc<span class="token punctuation">.</span><span class="token function">LoadXml</span><span class="token punctuation">(</span>sResponse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        <span class="token class-name">XmlNode</span> xmlAPIResponse <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">SelectSingleNode</span><span class="token punctuation">(</span><span class="token string">"response"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        
+                                                                        <span class="token class-name">HttpWebRequest</span> req <span class="token operator">=</span> WebRequest<span class="token punctuation">.</span><span class="token function">Create</span><span class="token punctuation">(</span>sAPICall<span class="token punctuation">)</span><span class="token keyword">as</span> HttpWebRequest<span class="token punctuation">;</span>
+                                                                        <span class="token keyword">string</span> sResponse <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+                                                                        <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name">HttpWebResponse</span> resp <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">GetResponse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">as</span> HttpWebResponse<span class="token punctuation">)</span>
+                                                                        <span class="token punctuation">{</span>
+                                                                            <span class="token class-name">StreamReader</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StreamReader</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span><span class="token function">GetResponseStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                            sResponse <span class="token operator">=</span> reader<span class="token punctuation">.</span><span class="token function">ReadToEnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        <span class="token punctuation">}</span>
+                                                                        <span class="token class-name">XmlDocument</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XmlDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        doc<span class="token punctuation">.</span><span class="token function">LoadXml</span><span class="token punctuation">(</span>sResponse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        <span class="token class-name">XmlNode</span> xmlAPIResponse <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">SelectSingleNode</span><span class="token punctuation">(</span><span class="token string">"response"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                                                        
+                                                                        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">Format</span><span class="token punctuation">(</span><span class="token string">"{0} response code = {1}"</span><span class="token punctuation">,</span> sMethodName<span class="token punctuation">,</span> xmlAPIResponse<span class="token punctuation">.</span>FirstChild<span class="token punctuation">.</span>InnerText<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>
+                                                                            </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="getSecureMessagesRuby" class="tab-pane fade in ">
+
+                        <div class="code-toolbar">
+                            <pre id="getsecuremessages-ruby" class="row collapse m-0 p-0 pl-3 language-ruby"
+                                data-parent="#getsecuremessages-code-example">        <br><code class=" language-ruby"><span class="token comment"># The following Ruby code will make a getSecureMessages call</span>
+        <span class="token comment"># and print the response status code.</span>
+        
+        <span class="token keyword">require</span> <span class="token string">'uri'</span>
+        <span class="token keyword">require</span> <span class="token string">'securerandom'</span>
+        <span class="token keyword">require</span> <span class="token string">'nokogiri'</span>
+        
+        uri <span class="token operator">=</span> <span class="token constant">URI</span><span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">"https://sandbox-api.gpsrv.com/intserv/4.0/getSecureMessages"</span><span class="token punctuation">)</span>
+        http <span class="token operator">=</span> <span class="token constant">Net</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">HTTP</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span>uri<span class="token punctuation">.</span>host<span class="token punctuation">,</span> uri<span class="token punctuation">.</span>port<span class="token punctuation">)</span>
+        
+        http <span class="token operator">=</span> <span class="token constant">Net</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">HTTP</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span>uri<span class="token punctuation">.</span>host<span class="token punctuation">,</span> uri<span class="token punctuation">.</span>port<span class="token punctuation">)</span>
+        request<span class="token punctuation">.</span>set_form_data<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"apiLogin"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">"apiTransKey"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">"providerId"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"550"</span><span class="token punctuation">,</span> <span class="token string">"transactionId"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"40985-random-string-10473"</span><span class="token punctuation">,</span> <span class="token string">"accountNo"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"074103447228"</span><span class="token punctuation">,</span> <span class="token string">"startDate"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"2018-10-01"</span><span class="token punctuation">,</span> <span class="token string">"endDate"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"2018-11-01"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        response <span class="token operator">=</span> http<span class="token punctuation">.</span>request<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+        
+        xml_doc <span class="token operator">=</span> <span class="token constant">Nokogiri</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">Slop</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+        puts<span class="token punctuation">(</span>xml_doc<span class="token punctuation">.</span>response<span class="token punctuation">.</span>status_code<span class="token punctuation">.</span>content<span class="token punctuation">)</span></code>
+            </pre>
+                            <div class="toolbar">
+                                <div class="toolbar-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 
+    stick-sidebar">
+        <div class="overview-pad-tb">
+        <a class="overview-txt overview-txt-clicked" href="#retrieve-secure-message-parameter">Parameters</a><br>
+        <a class="overview-txt" href="#retrieve-secure-message-status-code">Status
+            codes</a><br>
+        <a class="overview-txt" href="#retrieve-secure-message-response">Response</a><br>
+        <a class="overview-txt" href="#retrieve-secure-message-code-snipet">Code Snipet</a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span class="Feedback-txt">Feedback</span></div>
+            </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+    $('.overview-pad-tb a').on('click',function(){
+        $('.overview-pad-tb a').removeClass('overview-txt-clicked');
+        $(this).addClass('overview-txt-clicked');
+    });
+});
+</script>

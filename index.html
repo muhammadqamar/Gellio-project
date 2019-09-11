@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar custom">
+            <div class="">
+                <div class="col-md-12 col-sm-12 col-lg-12 pad-l-r-0">
+                    <div class="col-lg-4 col-md-4 col-sm-4 pad-l-r-0">
+                        <div class="navbar-header">
+
+                            <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=""
+                                    class="img-responsive main-logo"></a>
+                            <!-- <div class="documentation-txt">- Documentation</div> -->
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 pad-l-r-0">
+                        <div class="search-bar-wrap">
+
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input type="text" class="form-control search-bar" name="search">
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 pad-l-r-0">
+                        <div class="collapse navbar-collapse" id="myNavbar">
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li></li>
+                                <li><a href="#"><span class="btn btn-default"> Login to Dashboard</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </nav>
+
+    </header>
+    <div class="container-fluid header-bg">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="active" ><a data-toggle="tab" href="#DeveloperGuide" id="docs">Guides</a></li>
+                <li><a data-toggle="tab" href="#ProgramAPIs" id="api">Program API</a></li>
+                <li><a data-toggle="tab" href="#" id="features">Advanced Features</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content">
+
+        <div id="DeveloperGuide" class="tab-pane fade in active">
+            <div class="">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-tab-padding pad-l-r-0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 navi-tabs">
+                        <div
+                            class="col-lg-3 col-md-3 col-sm-3 col-xs-3 tabs-padding-tb sticky-menu-bar left-sidenav-bg">
+                            <nav class="navi-tabs__nav">
+                                <ul class="nav nav-tabs tabs-left sideways verticalnav-DeveloperGuide">
+                                    <li class="active"><a href="#home-v" data-toggle="tab">Overview </a>
+                                    </li>
+                                    <li><a href="#profile-v" data-toggle="tab">Getting Started </a></li>
+                                    <li><a href="#messages-v" data-toggle="tab">Using SandBox </a></li>
+                                    <li>
+                                        <a href="#account-tab" data-toggle="tab" id="account-doc">Account </a>
+                                    </li>
+                                    <li><a href="#cards " data-toggle="tab" id="card-doc">Cards </a>
+                                    </li>
+                                    <li><a href="#Transactions" data-toggle="tab" id="transaction-doc">Transactions </a>
+                                    </li>
+                                    <li><a href="#Location" data-toggle="tab" id="location-doc">Location </a></li>
+                                    <li><a href="#IVR" data-toggle="tab" id="ivr-doc">IVR </a></li>
+                                    <li><a href="#Bill-Payment" data-toggle="tab" id="bill-doc">Bill Payment </a></li>
+                                    <li><a href="#Program-and-Product-Management" data-toggle="tab"
+                                            id="program-doc">Program and Product
+                                            Management </a></li>
+                                    <li><a href="#Purchase-Account-Management" data-toggle="tab"
+                                            id="purchase-doc">Purchase Account
+                                            Management
+                                        </a></li>
+                                    <li><a href="#Federal-Benefit-Enrollment" data-toggle="tab" id="federal-doc">Federal
+                                            Benefit
+                                            Enrollment </a>
+                                    </li>
+								
+                                </ul>
+                            </nav>
+								<nav class="navi-tabs__nav api">
+                                <ul class="nav nav-tabs tabs-left sideways verticalnav">
+									      <li class="dropdown main-link">
+                                        <a href="#recipes-page" class="sub-nav-pad-left">Recipes
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown"><a
+                                                    href="#create-account-issue-card" class="link">Creating an
+                                                    account and issuing a card</a></li>
+                                            <li class="dropdown enrollment-dropdown"><a href="#Adding-card-account"
+                                                    class="link">Adding a card to an account</a></li>
+                                            <li class="dropdown enrollment-dropdown"><a
+                                                    href="#Activating-card-setting-PIN" class="link">Activating a
+                                                    card and setting a PIN</a></li>
+                                            <li class="dropdown enrollment-dropdown"><a
+                                                    href="#simulated-card-authorization" class="link">simulated a
+                                                    card authorization</a></li>
+                                            <li class="dropdown enrollment-dropdown"><a
+                                                    href="#Settling-simulated-card-authorization" class="link">Settling
+                                                    a simulated card authorization</a></li>
+                                            <li class="dropdown enrollment-dropdown"><a
+                                                    href="#Querying-balance-and-transactions" class="link">Querying
+                                                    for balance and transactions</a></li>
+                                            <li class="dropdown enrollment-dropdown"><a
+                                                    href="#Sending-money-between-two-accounts" class="link">Sending
+                                                    money between two accounts</a></li>
+                                            <li class="dropdown enrollment-dropdown"><a href="#Creating-virtual-card"
+                                                    class="link">Creating a virtual card</a></li>
+                                        </ul>
+                                    </li>
+									</ul>
+									</nav>
+                        </div>
+
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                            <div class="tab-content check">
+                                <div class="tab-pane active col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0"
+                                    id="home-v">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+                                           <div id="overview-preface">                                           
+										   <div class="content-seco-title-txt" >About the Galileo
+                                                Platform
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Galileo’s APIs connect you to the most advanced capabilities in fintech
+                                                and payments. The Galileo
+                                                Platform enables our Partners to perform transactions between any
+                                                parties. Our Partners’
+                                                transactions typically include financial transactions such as
+                                                credit/debit/ATM transactions,
+                                                transfers between accounts, and disbursement of funds. We connect to the
+                                                various association
+                                                networks (i.e. Visa, Mastercard, Cirrus, Maestro) on behalf of our
+                                                Partners.
+                                                Integrate with the Galileo Platform through our web services APIs, batch
+                                                file processing, and hosted
+                                                solutions. We provide a flexible framework for enabling the creation of
+                                                accounts and facilitating
+                                                payments.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Integrate with the Galileo Platform through our web services APIs, batch
+                                                file
+                                                processing, and hosted solutions. We provide a flexible framework for
+                                                enabling
+                                                the
+                                                creation of accounts and facilitating payments.
+                                            </div>
+
+                                            <div class="content-header-txt">Galileo Program Master API</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Create sophisticated, integrated financial solutions quickly and easily.
+                                            </div>
+
+                                            <div class="content-header-txt">Galileo Real-Time Events API</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Get real-time notification of customer activity—such as changes in card
+                                                status, authorization, settlement and deposits—as events happen.
+                                            </div>
+
+                                            <div class="content-header-txt">Galileo Authorization Controller API</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Experience the power of always knowing what’s happening in your
+                                                portfolio.
+                                            </div>
+                                            </div>
+											<br>
+											 <div  id="overview-product-hierarchy">
+                                            <div class="content-seco-title-txt" >Galileo
+                                                product hierarchy
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The Galileo platform is organized in a hierarchy as shown below -
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                                                <div class="product-hierarchy-img">
+                                                    <img class="img-responsive"
+                                                        src="img/partner-program product-account.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="content-header-txt">Partner</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The Galileo Platform is organized in a hierarchy. At the highest level
+                                                is the Partner, or a Galileo customer. Each Partner can have one or more
+                                                programs.
+                                            </div>
+                                            <div class="content-header-txt">Program</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                A wide variety of programs can be created with the Galileo Platform. Our
+                                                Partners create credit, debit, and prepaid cards programs with unique
+                                                and customized features.
+
+                                            </div>
+                                            <div class="content-header-txt">Product</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                A program will have one or more products. Products allow Partners to
+                                                provide options and offerings to their account holders. Product level
+                                                system and business configurations provide the functionality of the
+                                                program. Examples of these configurations include account type, account
+                                                portal capability, account limitations, card design, account messaging
+                                                and alerting, and so on.
+                                            </div>
+                                            <div class="content-header-txt">Account</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Each account belongs to a product. The assignment of the product can
+                                                change for an account. Hundreds of product configurations can be set-up
+                                                on the Galileo platform.
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                                                <img class="img-responsive" src="img/product-hierarchy1.png">
+                                            </div>
+											</div>
+											 <div  id="overview-account-structure">
+
+                                            <div class="content-seco-title-txt" id="overview-account-structure">Account
+                                                Structure
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The Galileo account structure is unique and flexible. The account
+                                                structure:
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <ul>
+                                                    <li>Account holder</li>
+                                                    <li>Account</li>
+                                                    <li>Balance</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Each account is based on an account number (PRN) and a product ID. (A
+                                                card can be associated with an account but is not required). The PRN is
+                                                a unique number that allows identification of the account for many
+                                                purposes, such as API calls.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                An account holder can have multiple accounts, any of those accounts can
+                                                share a balance with other accounts and account holders.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Account examples:
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <ul>
+                                                    <li>Basic account</li>
+                                                    <li>Secondary account holders</li>
+                                                    <li>Secondary account holders with an exclusive balance</li>
+                                                    <li>Savings accounts</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The Galileo Platform account structure is built on an account holder, an
+                                                account, and balance structures. Accounts usually belong to individuals
+                                                or entities. Accounts must have an identifier (i.e. Account number) and
+                                                a balance. Other attributes of an account
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <ul>
+                                                    <li>Personal identifiable information</li>
+                                                    <li>Account type</li>
+                                                    <li>Account access methods (i.e. credit card numbers)</li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- <div class="content-discription-txt content-description-pad-left">
+                                                           <mark class="mark-green"> 2) Secondary account holders with a shared balance - In this case multiple accounts share the balance and such accounts may have same or different account holders. All transactions for those accounts will affect the same balance. If there are insufficient funds in the account that is being transacted against, that transaction will be declined. (even if there are funds in a related secondary account with an exclusive balance)</mark>
+                                                        </div>
+                                                        <div class="content-discription-txt content-description-pad-left">
+                                                            <mark class="mark-green"> 3) Secondary account holders with an exclusive balance – Each account maintains exclusive balance and any transactions affects this balance only.</mark>
+                    
+                                                        </div>
+                                                        <div class="content-discription-txt content-description-pad-left">
+                                                           <mark class="mark-green"> 4) Savings account - This is a basic account structure on the Galileo platform. It will have an exclusive balance. There will not be a card associated with the savings account, and the only means by which an account holder can access the funds is via an account to account transfer.</mark>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                                                            <img class="img-responsive" src="img/account-structure.png">
+                                                        </div>
+                    
+                                                        <div class="content-discription-txt content-description-pad-left">
+                                                            There are no technical limitations to the number of accounts an account holder can have. There are no technical limitations to the number of accounts that can share the same balance.<u> There is a technical limitation that once a secondary account is created and set to share a balance, that account cannot have an exclusive balance. Likewise, if an account is created and set to have an exclusive balance, it cannot share an existing balance.</u>
+                                                        </div> -->
+                                            <div class="content-header-txt content-description-pad-left">
+                                                Secondary accounts
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Multiple accounts share a balance, and such accounts may have same or
+                                                different account holders. All transactions for those accounts will
+                                                affect the same balance. If there are insufficient funds in the account
+                                                that is being transacted against, that transaction will be declined.
+                                            </div>
+
+                                            <div class="content-header-txt content-description-pad-left">
+                                                Secondary account holders with an exclusive balance
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Each account maintains exclusive balance and any transactions affects
+                                                this
+                                                balance
+                                                only.
+                                            </div>
+
+                                            <div class="content-header-txt content-description-pad-left">
+                                                Savings account
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                This is a basic account structure on the Galileo platform. It will have
+                                                an exclusive balance. There will not be a card associated with the
+                                                savings account, and the only means by which an account holder can
+                                                access the funds is via an account to account transfer.
+                                            </div>
+
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                                                <img class="img-responsive" src="img/account-structure1.png">
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                There are no technical limitations to the number of accounts an account
+                                                holder can have. There are no technical limitations to the number of
+                                                accounts that can share the same balance.
+                                            </div>
+                                            <div class="content-description-pad-left note-txt">Note</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                A secondary account set to share a balance cannot have an exclusive
+                                                balance. Likewise, an account set to have an exclusive balance cannot
+                                                share an existing balance.
+                                            </div>
+
+                                        </div>
+										</div>
+
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0  sticky-menu-bar">
+									  <div class="overview-pad-tb1">
+                                        <div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#overview-preface" id="overview-preface1">About the Galileo
+                                                Platform</a><br />
+
+                                            <a class="overview-txt" href="#overview-product-hierarchy" id="overview-product-hierarchy1">Galileo product
+                                                hierarchy</a><br />
+
+                                            <a class="overview-txt" href="#overview-account-structure" id="overview-account-structure1">Account
+                                                Structure</a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0" id="profile-v">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0 content-pad-tb">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                                            <div class="content-seco-title-txt" id="getting-preface">Overview </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0">
+                                                <div class="definition-txt">
+                                                    Getting Started with the Program Master API
+
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    Using the Galileo Platform and the Master Program API requires a
+                                                    sign up through Galileo’s account services. See the steps below to
+                                                    get started.
+                                                </div>
+												 <div  id="getting-signing-up">
+                                                <div class="content-header-txt" >Signing up</div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    Become a Galileo Partner by contacting us with the registration form
+                                                    found <a href="#">here</a>. (But first, we recommend you give our <a
+                                                        href="#">Sandbox</a> a try.)
+
+                                                </div>
+												</div>
+												 <div  id="getting-program-api">
+                                                <div class="content-header-txt" >
+                                                    Using the Program Master API
+
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    Once a Partner has completed registration with Galileo (using the
+                                                    registration form mentioned above) the steps to get up and running
+                                                    with live calls to the API are straightforward.
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    Using our Getting Started <a href="#">form</a>, a Partner: Creates
+                                                    API keys, creates a product, creates a team, make calls to the API,
+                                                    and uses the returned information as the Partner sees fit. Steps in
+                                                    using the Getting Started form:
+                                                    <ol>
+                                                        <li>Create confidential keys to use with the API.
+                                                        </li>
+                                                        <li>Secure the confidential keys, and share them with the
+                                                            Partner’s development team.</li>
+                                                        <li>Create a product. (Steps for this are found in the <a
+                                                                href="#">documentation</a>).
+                                                        </li>
+                                                        <li>Fund an account.
+                                                        </li>
+                                                        <li>Create a development team.
+                                                        </li>
+                                                        <li>Make API calls and consume the returned information.
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    Keys for using the API are shown below. (You get these as part of
+                                                    the registration process).
+                                                    <ul>
+                                                        <li>apiLogin - Provider's web service username.
+                                                        </li>
+                                                        <li>apiTransKey - Provider's web service password.
+                                                        </li>
+                                                        <li>providerId - Galileo issued provider identifier.
+                                                        </li>
+                                                        <li>prodId - The identity of the account or card account being
+                                                            created.
+                                                        </li>
+                                                        <li>transactionId - A string of alphanumeric characters (hyphen
+                                                            also allowed) that helps uniquely define your transaction on
+                                                            the Galileo Platform.
+                                                        </li>
+
+
+                                                    </ul>
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    Your account manager will work with you to be sure you have the
+                                                    correct information.
+
+                                                </div>
+												</div>
+												  <div  id="getting-api-call-response">
+                                                <div class="content-header-txt" >
+                                                    Sample API call and response
+
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">A
+                                                    sample API call using cURL with Sandbox keys looks like the
+                                                    below. <span class="red-txt">(The ping()</span> method is
+                                                    demonstrated).
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">Note
+                                                    the endpoint:</div>
+                                                <div class="content-discription-txt content-description-pad-left">curl
+                                                    -v https://sandbox-api.gpsrv.com/intserv/4.0/ping</div>
+                                                <div class="content-discription-txt content-description-pad-left">Note
+                                                    also the keys being used:</div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    <ul>
+                                                        <li>apiLogin</li>
+                                                        <li>apiTransKey</li>
+                                                        <li>providerId</li>
+                                                        <li>transactionId</li>
+                                                        <li>prodId</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">The
+                                                    ping() call is very simple:</div>
+                                                <div># The following shell script will use cURL to call ping() and
+                                                </div>
+                                                <div class="red-txt"># print the full XML response
+                                                </div>
+                                                <div class="red-txt">curl -v
+                                                    https://sandbox-api.gpsrv.com/intserv/4.0/ping \</div>
+                                                <div class="red-txt">-d 'apiLogin=Cl6NYX-9999' \
+                                                </div>
+                                                <div class="red-txt">-d 'apiTransKey=WVKfS3eQu5' \
+                                                </div>
+                                                <div class="red-txt">-d 'providerId=550' \</div>
+                                                <div class="red-txt">
+                                                    -d 'transactionId=54352-random-string-68775' \
+
+                                                </div>
+                                                <div class="red-txt">-d 'prodId=501'
+                                                </div>
+                                                <div>A XML response to the <span class="red-txt">ping()</span> method
+                                                    call:
+                                                </div>
+
+                                                <p><span class="style-returned">&lt; ?xml version="1.0"
+                                                        encoding="UTF-8"&gt;<br>
+                                                        &nbsp;&nbsp; &lt;response&gt;<br>
+                                                        &nbsp;&nbsp; &lt;status_code&gt;0&lt;/status_code&gt;<br>
+                                                        &nbsp;&nbsp; &lt;status&gt;Success&lt;/status&gt;<br>
+                                                        &nbsp;&nbsp; &lt;system_timestamp&gt;2011-10-07
+                                                        10:25:07&lt;/system_timestamp&gt;<br>
+                                                        &nbsp;&nbsp; &lt;response_data&gt;<br>
+
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &lt;processing_time&gt;0.973&lt;/processing_time&gt;<br>
+                                                        &nbsp;&nbsp; &lt;echo&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &lt;transaction_id&gt;12345a&lt;/transaction_id&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &lt;provider_transaction_id&gt;77bb&lt;/provider_transaction_id&gt;<br>
+
+
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &lt;provider_timestamp&gt;2013-02-06
+                                                        10:10:10&lt;/provider_timestamp&gt;<br>
+                                                        &nbsp;&nbsp; &lt;/echo&gt;<br>
+                                                        &lt;/response&gt;</span>
+                                                </p>
+
+                                                <div class="content-discription-txt content-description-pad-left">Note
+                                                    that the <span class="green-txt">status_code</span> statement
+                                                    returned a 0, which means a successful <span
+                                                        class="red-txt">ping()</span> transaction.</div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    Understanding the endpoint and the response file makes it easy to
+                                                    use them in developing applications.</div>
+
+                                                <!-- <div class="content-header-txt">
+                                                    Using the Sandbox API
+
+                                                </div>
+                                                <div class="">
+                                                    The Galileo Processing Sandbox is a trial version of our solution,
+                                                    or a look into the possibilities. Using the Sandbox API builds
+                                                    expertise in the live Program Master API. The Sandbox uses simulated
+                                                    data to create simple card programs and products.
+
+                                                </div>
+                                                <div class="">
+                                                    Create a Sandbox account from the Galileo <a href="#">sign up
+                                                        page</a>. Enter a few fields of contact information, and we’ll
+                                                    be in touch to complete the registration.
+                                                </div>
+                                                <div class="">
+                                                    Once registered, these are the steps in using the Sandbox:
+                                                    <ol>
+                                                        <li>Get registered with Galileo for Sandbox access.
+                                                        </li>
+                                                        <li>Set up a programming environment. (The Sandbox supports
+                                                            cURL, Java, Python, PHP, C#, and Ruby).
+                                                        </li>
+                                                        <li>Using the keys supplied from Sandbox registration, send a
+                                                            <span class="red-txt">ping()</span> call to the Sandbox API.
+                                                        </li>
+                                                        <li>Examine the response (the response will be in JSON or XML).
+                                                            A <span class="red-txt">status_code </span>= 0 in the
+                                                            response file means a successful call.
+                                                        </li>
+                                                        <li>Advanced class: send a <span
+                                                                class="red-txt">createAccount()</span> call with
+                                                            parameters to the Sandbox.</li>
+                                                        <li>Experiment -- Create programs and products. Everything a
+                                                            developer learns will apply to the Program Master API. Our
+                                                            documentation contains guides and references to using the
+                                                            API methods.
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div>
+                                                    See <a href="#">Using the Program Master API </a>for a sample <span
+                                                        class="red-txt">ping()</span> call, and the response file it
+                                                    generates. The next section contains information on the <span
+                                                        class="red-txt">createAccount()</span> method call response.
+
+                                                </div>
+                                                <div class="content-header-txt">
+                                                    Method response file
+
+                                                </div>
+                                                <div>
+                                                    The response file (in XLM or JSON, depending on a value passed in
+                                                    the method call) contains a lot of information. The response is the
+                                                    desired information from the transaction made with the API call.
+                                                </div>
+                                                <div><span class="green-txt">Green </span>text: Status fields. 0 means
+                                                    the transaction was completed.
+                                                </div>
+                                                <div>
+                                                    <span class="blue-txt">Blue</span> text: response_data structure.
+                                                    The information requested, in most cases. (Some methods do not
+                                                    return information, but they will always be successful or not).
+
+                                                </div>
+                                                <div>
+                                                    The remaining fields are information about the transaction process.
+                                                    Below is a response file from a <span
+                                                        class="red-txt">createAccount()</span> call.
+
+                                                </div>
+
+
+                                                <p>
+                                                    <span class="style-returned">&lt;?xml version="1.0"
+                                                        encoding="UTF-8"?&gt;
+                                                        &lt;response&gt;<br>
+                                                        <strong>&nbsp;&nbsp;
+                                                            &lt;status_code&gt;0&lt;/status_code&gt;</strong><br>
+                                                        &nbsp;&nbsp; &lt;status&gt;Success&lt;/status&gt;<br>
+                                                        &nbsp;&nbsp; &lt;system_timestamp&gt;2019-06-21
+                                                        08:14:20&lt;/system_timestamp&gt;<br>
+                                                        &nbsp;&nbsp; &lt;response_data&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <strong>&lt;pmt_ref_no&gt;999900141667&lt;/pmt_ref_no&gt;<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            &lt;product_id&gt;5094&lt;/product_id&gt;<br>
+
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            &lt;galileo_account_number&gt;524&lt;/galileo_account_number&gt;</strong><br>
+                                                        &nbsp;&nbsp; &lt;cip&gt;null&lt;/cip&gt;<br>
+                                                        &nbsp;&nbsp; &lt;card_id&gt;525&lt;/card_id&gt;<br>
+                                                        &nbsp;&nbsp;
+                                                        &lt;card_number&gt;512773XXXXXX3259&lt;/card_number&gt;<br>
+                                                        &nbsp;&nbsp; &lt;expiry_date&gt;null&lt;/expiry_date&gt;<br>
+                                                        &nbsp;&nbsp; &lt;/response_data&gt;<br>
+
+                                                        &nbsp;&nbsp;
+                                                        &lt;processing_time&gt;1.755&lt;/processing_time&gt;<br>
+                                                        &nbsp;&nbsp; &lt;echo&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &lt;transaction_id&gt;12345a&lt;/transaction_id&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &lt;provider_transaction_id&gt;77bb&lt;/provider_transaction_id&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;provider_timestamp&gt;2019-06-21
+                                                        09:14:20&lt;/provider_timestamp&gt;<br>
+                                                        &nbsp;&nbsp; &lt;/echo&gt;<br>
+                                                        &lt;/response&gt;</span>
+                                                </p> -->
+                                            </div>
+											</div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0  sticky-menu-bar">
+  <div class="overview-pad-tb1" >                                       
+									   <div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#getting-signing-up"  id="getting-signing-up1">Signing up</a><br />
+                                            <a class="overview-txt" href="#getting-program-api" id="getting-program-api1">Using the Program Master
+                                                API</a>
+                                            <a class="overview-txt" href="#getting-api-call-response" id="getting-api-call-response1">Sample API call
+                                                and
+                                                response</a>
+                                            <!-- <a class="overview-txt" href="#getting-sandbox">Config Sandbox</a> -->
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0" id="messages-v">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+                                            <div class="content-seco-title-txt" id="sandbox-preface">Getting started
+                                                with the Sandbox</div>
+												 <div  id="sandbox-signing-up">
+                                            <div class="content-header-txt" >Signing up</div>
+                                            <div class="content-discription-txt content-description-pad-left">To learn
+                                                our product, the Sandbox gives you an opportunity to try out endpoints,
+                                                examine response data, and even create entire applications based on
+                                                made-up data.</div>
+												</div>
+												 <div id="sandbox-using-api">
+
+                                            <div class="content-header-txt" id="sandbox-using-api">Using the Sandbox API
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">The
+                                                Galileo Processing Sandbox is a trial version of our solution, or a look
+                                                into the possibilities. Using the Sandbox API builds expertise in the
+                                                live Program Master API. The Sandbox uses simulated data to create
+                                                simple card programs and products.</div>
+                                            <div class="content-discription-txt content-description-pad-left">Create a
+                                                Sandbox account from the Galileo <a href="#">sign up page</a>. Enter a
+                                                few fields of contact information, and we’ll be in touch to complete the
+                                                registration.</div>
+                                            <div class="content-discription-txt content-description-pad-left">Once
+                                                registered, these are the steps in using the Sandbox:</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <ol>
+                                                    <li>Get registered with Galileo for Sandbox access.</li>
+                                                    <li>Set up a programming environment. (The Sandbox supports cURL,
+                                                        Java, Python, PHP, C#, and Ruby).</li>
+                                                    <li>Using the keys supplied from Sandbox registration, send a <span
+                                                            class="red-txt">ping()</span> call to the Sandbox API.</li>
+                                                    <li>Examine the response (the response will be in JSON or XML). A
+                                                        <span class="red-txt">status_code</span> = 0 in the response
+                                                        file means a successful call.</li>
+                                                    <li>Advanced class: send a <span
+                                                            class="red-txt">createAccount()</span> call with parameters
+                                                        to the Sandbox.</li>
+                                                    <li>Experiment -- Create programs and products. Everything a
+                                                        developer learns will apply to the Program Master API. Our
+                                                        documentation contains guides and references to using the API
+                                                        methods.</li>
+                                                </ol>
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">See <a
+                                                    href="#">Using the Program Master API</a> for a sample
+                                                <span class="red-txt">ping()</span> call, and the response file it
+                                                generates. The next section contains information on the <span
+                                                    class="red-txt">createAccount()</span> method call response.</div>
+
+
+                                            <div class="content-header-txt">Method response file</div>
+                                            <div class="content-discription-txt content-description-pad-left">The
+                                                response file (in XLM or JSON, depending on a value passed
+                                                in the method call) contains a lot of information. The response is the
+                                                desired information from the transaction made with the API call.</div>
+                                            <div><strong>Status fields. 0 means the transaction was completed.</strong>
+                                            </div>
+                                            <div><i>text: response_data structure. The information requested, in most
+                                                    cases. (Some methods do notreturn information, but they will always
+                                                    be successful or not).</i></div>
+
+                                            <div class="content-discription-txt content-description-pad-left">The
+                                                remaining fields are information about the transaction
+                                                process. Below is a response file from a <span
+                                                    class="red-txt">createAccount()</span> call.</div>
+                                            <p>
+                                                <span class="style-returned">
+                                                    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
+                                                    &lt;response&gt;<br>
+                                                    &lt;status_code&gt;0&lt;/status_code&gt;<br>
+                                                    &lt;status&gt;Success&lt;/status&gt;<br>
+                                                    &lt;system_timestamp&gt;2019-06-21
+                                                    08:14:20&lt;/system_timestamp&gt;<br>
+                                                    &nbsp;&nbsp; &lt;response_data&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;pmt_ref_no&gt;999900141667&lt;/pmt_ref_no&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;product_id&gt;5094&lt;/product_id&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;galileo_account_number&gt;524&lt;/galileo_account_number&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;cip&gt;null&lt;/cip&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;card_id&gt;525&lt;/card_id&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;card_number&gt;512773XXXXXX3259&lt;/card_number&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;expiry_date&gt;null&lt;/expiry_date&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;card_security_code&gt;null&lt;/card_security_code&gt;<br>
+                                                    &nbsp;&nbsp; &lt;/response_data&gt;<br>
+                                                    &nbsp;&nbsp;
+                                                    &lt;processing_time&gt;1.755&lt;/processing_time&gt;<br>
+                                                    &nbsp;&nbsp; &lt;echo&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;transaction_id&gt;12345a&lt;/transaction_id&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &lt;provider_transaction_id&gt;77bb&lt;/provider_transaction_id&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;provider_timestamp&gt;2019-06-21
+                                                    09:14:20&lt;/provider_timestamp&gt;<br>
+                                                    &nbsp;&nbsp; &lt;/echo&gt;<br>
+                                                    &lt;/response&gt;<br>
+                                                </span>
+                                            </p>
+                                        </div>
+										</div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0  sticky-menu-bar">
+                                          <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#sandbox-signing-up" id="sandbox-signing-up1">Signing up</a><br>
+                                            <a class="overview-txt" href="#sandbox-using-api" id="sandbox-using-api1">Using the Sandbox
+                                                API</a><br>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0"
+                                    id="account-tab">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+                                            <!-- <div class="content-header-txt" id="account-tab-preface"> – Type etc.</div> -->
+                                             <div id="account-tab-preface">
+                                            <div class="content-seco-title-txt content-description-pad-left">
+                                                Account overview
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The methods documented in this section focus on account enrollment and
+                                                Account
+                                                Management.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+
+
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <b> Create Account -&gt; Update Enrollment -&gt; Run CIP -&gt; Complete
+                                                    Enrollment</b>
+                                                <div class="content-header-txt">Account Enrollment - Plastic and Virtual
+                                                </div>
+                                                <div class="img-wrap">
+
+                                                    <img src="img/acc-enroll.png" class="img-responsive">
+                                                </div>
+                                                <div class="img-wrap">
+                                                    <img src="img/acc-enroll2.png" class="img-responsive">
+                                                </div>
+												</div>
+												<div id="account-api-link">
+                                                <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                    <a class="content-seco-title-txt account-api-link" href="#"
+                                                        onclick="openProgramApi('account-api')"
+                                                        >API's</a>
+                                                </div>
+												</div>
+												  <div  id="ach-account">
+                                                <div class="content-seco-title-txt" >Ach Accounts –
+                                                </div>
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    <ul>
+                                                        <li>Get record set of ACH accounts related to a customer
+                                                            account.</li>
+                                                        <li>Add an ACH account to a customer profile.</li>
+                                                        <li>Modify an existing customer ACH account.</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="content-discription-txt content-description-pad-left">
+                                                    <div class="content-header-txt">
+                                                        ACH flows
+
+                                                    </div>
+                                                    <div class="content-discription-txt content-description-pad-left">
+                                                        ACH Origination and return process
+                                                    </div>
+                                                    <div class="content-header-txt">
+                                                        ACH flows
+
+                                                    </div>
+                                                    <div class="img-wrap">
+                                                        <img src="img/acc-enroll.png">
+                                                    </div>
+                                                </div>
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0  sticky-menu-bar">
+                                          <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#account-tab-preface" id="account-tab-preface1">Overview</a><br>
+                                            <a class="overview-txt account-api-link"
+                                                href="#account-api-link" id="account-api-link1">API's</a><br />
+                                            <a class="overview-txt" href="#ach-account" id="ach-account1">ach-account</a><br />
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0" id="cards">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+										<div  id="card-preface">
+                                            <div class="content-seco-title-txt" >Overview</div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The methods documented in this section are focused on card activities.
+                                            </div>
+											</div>
+											<div  id="card-apis">
+
+                                            <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                <a class="content-seco-title-txt"  href="#"
+                                                    onclick="openProgramApi('card-api')">APIs</a>
+                                            </div>
+											</div>
+											<div id="card-virtual">
+
+                                            <div class="content-seco-title-txt" >Virtual Card</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                createVirtualCard() will create an account/card combination with a
+                                                virtual card product ID and a full PAN, expiry, and CVV2. It also allows
+                                                the
+                                                loading of funds to the card at the time of creation.
+                                            </div>
+											</div>
+											<div id="card-inventory">
+
+                                            <div class="content-seco-title-txt" id="card-inventory">Card Inventory
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Card inventory management methods include the below.
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <div class="content-seco-title-txt">
+                                                    <mark class="mark-yellow def-txt">(Content to be filled)</mark>
+                                                </div>
+                                                <!-- <ul>
+                                                                <li>createBulkCardOrder()</li>
+                                                                <li>getBulkCardOrder()</li>
+                                                                <li>moveCardInventory()</li>
+                                                                <li>moveCard()</li>
+                                                            </ul> -->
+                                            </div>
+											</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0  sticky-menu-bar">
+                                          <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#card-preface"  id="card-preface1">Overview</a><br />
+                                            <a class="overview-txt" href="#card-apis" id="card-apis1">APIs</a><br />
+                                            <a class="overview-txt" href="#card-virtual" id="card-virtual1">Virtual Card</a><br />
+                                            <a class="overview-txt" href="#card-inventory" id="card-inventory1">Card Inventory</a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0"
+                                    id="Transactions">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+                                           <div id="transaction-preface">                                           
+										   <div class="content-seco-title-txt" >Overview </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Methods that return transaction information are covered in this section.
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <div class="content-header-txt">
+                                                    Transactions
+                                                </div>
+                                                <div>
+                                                    A financial transaction is a change in the status of the finances of
+                                                    two or more businesses or individuals. In credit and debit card
+                                                    processing, transactions can post to an account or they can pend.
+                                                    Use the Galileo Platform to execute transactions that:
+                                                </div>
+                                                <ul>
+                                                    <li>Load funds to a customer account.</li>
+                                                    <li>Assess fees to an account.</li>
+                                                    <li>Reverse a fee created with the assessFee() method or created
+                                                        elsewhere on the Galileo platform.</li>
+                                                    <li>Makes credit or debit adjustments on an account.</li>
+                                                    <li>Reverse a credit or debit adjustment on an account.</li>
+                                                    <li>Reverse a payment.</li>
+                                                    <li>Report pending ACH deposits (including status information).</li>
+                                                    <li>Create a hold or reserve on an amount of funds for a specific
+                                                        payment and a given amount of time.</li>
+                                                </ul>
+                                                <div>
+                                                    Many other transaction types are available.
+                                                </div>
+                                                <div class="content-header-txt pad-top-20">
+                                                    Methods
+                                                </div>
+                                                <div>
+                                                    The Galileo Platform uses the Master Program API to execute
+                                                    method-based transactions. Methods pass a method name and parameters
+                                                    over a secure URL. A response with the desired information is
+                                                    returned in JSON or XML format. A partial list of methods that
+                                                    execute transactions.
+                                                </div>
+                                                <ul>
+                                                    <li>assessFee()--Assesses a fee to an account.</li>
+                                                    <li>reverseFee()--Reverse a fee created with the assessFee method or
+                                                        created elsewhere on the Galileo platform.</li>
+                                                    <li>createAdjustment()--Makes credit or debit adjustments on an
+                                                        account.</li>
+                                                    <li>reverseAdjustment()--Reverses a credit or debit adjustments on
+                                                        an account.</li>
+                                                    <li>createPayment()--Enables the loading of funds to a customer
+                                                        account.</li>
+                                                    <li>reversePayment()--Reverses a payment.</li>
+                                                    <li>updatePayment()--Allows for the updating of the 'hold days' for
+                                                        a pending payment.</li>
+                                                    <li>createAccountTransfer()--Bundles a load, adjustment, and fee
+                                                        into one API call. Transfers occur between two accounts on a
+                                                        single program.</li>
+                                                    <li>reverseAccountTransfer()--Reverses a createAccountTransfer()
+                                                        method call.</li>
+                                                    <li>expireAuthorization()--Expires an existing authorization hold on
+                                                        a customer account.</li>
+                                                    <li>getPendingDeposits()--Get a report of pending ACH deposits
+                                                        including status information.</li>
+                                                    <li>getDepositHistory()--Get deposit history data for your entire
+                                                        program or related to a specific customer.</li>
+                                                    <li>modifyPendingDepositStatus()--Triage direct deposits; accepting
+                                                        and rejecting as needed</li>
+                                                    <li>createHold()--Creates a hold or reserve on an amount of funds
+                                                        for a specific payment and a given amount of time.</li>
+                                                    <li>expireHold()--Expires a funds hold made with createHold().</li>
+                                                    <li>getHoldHistory()--Returnsa history of holds created for a
+                                                        specified account.</li>
+                                                    <li>getPendingMerchantCredits()--Returns a data set of merchant
+                                                        credits that are pending or in a status of waiting to be
+                                                        processed.</li>
+                                                    <li>updatePendingMerchantCredit()--Post or post/hold a merchant
+                                                        credit.</li>
+                                                </ul>
+                                                <div class="content-header-txt">
+                                                    Sample method
+                                                </div>
+                                                <div>
+                                                    A method used to create an adjustment (with parameters using fake
+                                                    data):
+                                                </div>
+                                                <div class="style-returned">
+                                                    <div>curl -v
+                                                        https://sandbox-api.gpsrv.com/intserv/4.0/createAdjustment \
+                                                    </div>
+                                                    <div>-d 'apiLogin=Cl6NYX-9999' \</div>
+                                                    <div>-d 'apiTransKey=WVKfS3eQu5' \</div>
+                                                    <div>d 'providerId=550' \</div>
+                                                    <div>-d 'transactionId=82818-random-string-64938' \</div>
+                                                    <div>-d 'accountNo=074103447228' \</div>
+                                                    <div>-d 'amount=25.50' \</div>
+                                                    <div>-d 'type=2' \</div>
+                                                    <div>-d 'debitCreditIndicator=D' \</div>
+                                                    <div>-d 'location=a455-3483' \</div>
+                                                    <div>-d 'locationType=1'</div>
+                                                </div>
+                                                <div class="content-header-txt pad-top-20">
+                                                    Security
+                                                </div>
+                                                <div>
+                                                    Each method uses a base set of parameters that handle validation of
+                                                    the authentication elements. The user is authenticated before the
+                                                    method logic is processed.
+                                                </div>
+                                                <div class="Method access ">
+                                                    Method access
+                                                </div>
+                                                <div>Master Program API access is granted when:</div>
+                                                <ol>
+                                                    <li>The Partner and Galileo have agreed upon which methods to use.
+                                                    </li>
+                                                    <li>The Partner and Galileo have certified those methods in the
+                                                        user’s environment. </li>
+                                                    <li>The Partner has been granted access.</li>
+
+                                                </ol>
+                                            </div>
+											</div>
+											<div id="transaction-apis">
+
+                                            <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                <a class="content-seco-title-txt" href="#"
+                                                    onclick="openProgramApi('transaction-api')"
+                                                    >APIs</a>
+                                            </div>
+											</div>
+                                             <div id="transaction-adjustment" >
+                                            <div class="content-seco-title-txt" id="transaction-adjustment">Adjustments
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Makes credit or debit adjustments on an account.
+                                            </div>
+											</div>
+											<div id="transaction-payment">
+
+                                            <div class="content-seco-title-txt" >Payment</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The createPayment() method loads funds to a customer account. The
+                                                Galileo limit and velocity verification engine will return response
+                                                information
+                                                related to any limit or velocity violations.
+                                            </div>
+											</div>
+											<div  id="transaction-hold">
+
+                                            <div class="content-seco-title-txt">Hold</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The createHold() method creates a hold or reserve on an amount of funds
+                                                for
+                                                a specific payment and a given amount of time.
+                                            </div>
+											</div>
+											<div id="transaction-merchant-credits">
+
+                                            <div class="content-seco-title-txt" id="transaction-merchant-credits">
+                                                Merchant
+                                                Credits
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Post or post/hold a merchant credit.
+                                            </div>
+											</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 sticky-menu-bar">
+                                        <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#transaction-preface" id="transaction-preface1">Overview</a><br />
+                                            <a class="overview-txt" href="#transaction-apis" id="transaction-apis1">APIs</a><br />
+                                            <a class="overview-txt" href="#transaction-adjustment" id="transaction-adjustment1">Adjustments</a><br />
+                                            <a class="overview-txt" href="#transaction-payment" id="transaction-payment1">Payment</a><br />
+                                            <a class="overview-txt" href="#transaction-hold" id="transaction-hold1">Hold</a><br />
+                                            <a class="overview-txt" href="#transaction-merchant-credits" id="transaction-merchant-credits1">Merchant
+                                                Credits</a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0" id="Location">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+										<div id="facebook_ads_example">
+                                            <div class="content-seco-title-txt">Overview</div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Locations in the Galileo Platform have multiple uses. Examples include:
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Configurations where locations are used for instant issue card
+                                                management and
+                                                configurations where locations are used to relate and identify where a
+                                                cardholder
+                                                was issued their card. The following methods can be used to manage
+                                                locations.
+                                            </div>
+                                            <div class="content-header-txt">
+                                                Locations
+                                            </div>
+                                            <div>
+                                                Locations are used to identify where a cardholder was issued their card
+                                                (and to store configurations for instant issue card management). Some
+                                                card associations require location information. The Master Program API
+                                                can:
+                                            </div>
+                                            <ul class="pad-top-20">
+                                                <li>
+                                                    Returns a list of load locations nearest the postal code that is
+                                                    provided.
+                                                </li>
+                                                <li>
+                                                    Retrievesa recordset of locations based on search criteria.
+                                                    Locations can be searched by location ID, location name (or
+                                                    partial), and location street address (or partial).
+                                                </li>
+                                                <li>
+                                                    Creates a new store location, associates a provider specific ID, and
+                                                    nests it below a parent store.
+                                                </li>
+                                                <li>
+                                                    Updates or modifies key data elements related to a location.
+                                                </li>
+
+                                            </ul>
+                                            <div>
+                                                The group_id response field (available to several methods) reports the
+                                                location (store, entity, etc.) of a customer acquisition. The
+                                                group_idresponse is set using the location and locationType parameters
+                                                in location based methods.
+                                            </div>
+
+                                            <!-- <div class="content-header-txt" id="transaction-merchant-credits">getLocations()
+                                                        </div>
+                                                        <div class="content-discription-txt content-description-pad-left">
+                                                            Locations can be searched by location ID, location name (or partial), and
+                                                            location street address (or partial).
+                                                        </div>
+                    
+                                                        <div class="content-header-txt" id="transaction-merchant-credits">createLocation()
+                                                        </div>
+                                                        <div class="content-discription-txt content-description-pad-left">
+                                                            create a new store location, associates a provider specific ID, and
+                                                            nest it below a parent store.
+                                                        </div>
+                    
+                                                        <div class="content-header-txt" id="transaction-merchant-credits">modifyLocation()
+                                                        </div>
+                                                        <div class="content-discription-txt content-description-pad-left">
+                                                            Update or modify key data elements related to a location.
+                                                        </div> -->
+														
+														</div>
+														<div id="facebook_adss_example">
+
+                                            <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                <a class="content-seco-title-txt" href="#"
+                                                    onclick="openProgramApi('location-api')">APIs</a>
+                                            </div>
+											</div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 sticky-menu-bar">
+                                        <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#facebook_ads_example"  id="facebook_ads_example1">Overview</a><br />
+                                            <a class="overview-txt" href="#facebook_adss_example" id="facebook_adss_example1">APIs</a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+										
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0" id="IVR">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+										<div id="ivr-overview">
+                                            <div class="content-seco-title-txt" > Overview </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Creates an IVR call entry, get the IVR call status of outbound IVR
+                                                calls.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <div class="content-header-txt">
+                                                    IVR
+                                                </div>
+                                                <div>Interactive Voice Recognition (IVR) systems replace human call
+                                                    handling with technology that interacts with customers. Customers
+                                                    create accounts, request new cards, check on balances, and perform
+                                                    many other functions with IVR systems. IVR systems reducecall
+                                                    volumeand give customers immediate service. </div>
+                                                <div>The Program Master API allowsIVR phone calls to be created and
+                                                    tracked.</div>
+                                                <ul>
+                                                    <li>Creates IVR call entries.</li>
+                                                    <li>Retrieves the IVR call status of outbound IVR calls.</li>
+
+                                                </ul>
+                                            </div>
+											</div>
+											<div id="ivr-apis">
+
+                                            <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                <a class="content-seco-title-txt" href="#"
+                                                    onclick="openProgramApi('ivr-api')" >APIs </a>
+                                            </div>
+											</div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 sticky-menu-bar">
+                                        <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#ivr-overview"  id="ivr-overview1">Overview</a><br />
+                                            <a class="overview-txt" href="#ivr-apis" id="ivr-apis1">APIs</a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0"
+                                    id="Bill-Payment">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+										<div id="bill-payment-preface">
+                                            <div class="content-seco-title-txt" >Overview</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                The below methods are part of the bill payment category.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <div class="img-wrap">
+                                                    <img src="img/bill-pay.png">
+                                                </div>
+                                                <div class="img-wrap">
+                                                    <img src="img/billpay2.png">
+                                                </div>
+                                            </div>
+											</div>
+											<div id="bill-payment-apis">
+
+                                            <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                <a class="content-seco-title-txt" href="#"
+                                                    onclick="openProgramApi('bill-api')" >APIs
+                                                </a>
+                                            </div>
+											</div>
+
+
+                                          <div id="bill-payment-paper">
+
+                                            <div class="content-seco-title-txt" >Paper </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Create a custom paper biller for a cardholder.
+                                            </div>
+											</div>
+											<div id="bill-payment-rpps">
+
+                                            <div class="content-seco-title-txt" >RPPS </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Create a Remote Payment and Presentment Service (RPPS) biller
+                                                registration
+                                                for a respective customer.
+                                            </div>
+											</div>
+											<div id="bill-payment-adding-biller">
+
+                                            <div class="content-seco-title-txt">Adding
+                                                Biller
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Create a bill payment transaction related to an existing billing
+                                                registration.
+                                            </div>
+                                            <!-- <div class="content-header-txt" id="bill-payment-bill-payment">Bill Payment </div> -->
+
+                                        </div>
+										</div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 sticky-menu-bar ">
+                                        <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#bill-payment-preface"  id="bill-payment-preface1">Overview</a><br />
+                                            <a class="overview-txt" href="#bill-payment-apis" id="bill-payment-apis1">APIs</a><br />
+                                            <a class="overview-txt" href="#bill-payment-paper" id="bill-payment-paper1">Paper</a><br />
+                                            <a class="overview-txt" href="#bill-payment-rpps" id="bill-payment-rpps1">RPPS</a><br />
+                                            <a class="overview-txt" href="#bill-payment-adding-biller" id="bill-payment-adding-biller1">Adding
+                                                Biller</a><br />
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0"
+                                    id="Program-and-Product-Management">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+										<div   id="ppm-preface">
+                                            <div class="content-seco-title-txt">Overview</div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Search already defined card products and retrieve essential related
+                                                production
+                                                configurations.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <div class="content-header-txt">
+                                                    Program and Product Management
+                                                </div>
+                                                <div>
+                                                    The createProductFromTemplate() method allows the Partner to create
+                                                    a card product on the Galileo Platform. Search defined card products
+                                                    and retrieve some of the essential related production
+                                                    configurations. Use this information to create new products.
+                                                    Products are created based on a template or existing product.
+                                                </div>
+                                                <div class="content-header-txt">
+                                                    Program set-up
+                                                </div>
+                                                <div>
+                                                    The Galileo Program Management Solution helps our Partners operate
+                                                    fintech or payments programs with confidence.
+                                                </div>
+                                                <div>
+                                                    Galileo’s deep experience is particularly valuable during start up.
+                                                    We’ll support you in successfully navigating your sponsoring bank’s
+                                                    and payments network’s exacting (and often exasperating) rules and
+                                                    standards, which touch almost every part of your program.
+                                                </div>
+                                                <div>
+                                                    We’ll also support you in setting up your back office, including
+                                                    authorization and settlement, customer service and IVR, fraud
+                                                    management and dispute resolution—to name just several examples. Or,
+                                                    at your option, we can manage all these functions (and more) on your
+                                                    behalf, as well as support your ongoing card production, fulfillment
+                                                    and packaging design
+                                                </div>
+                                            </div>
+											</div>
+											<div  id="ppm-apis">
+
+                                            <a class="content-seco-title-txt" href="#"
+                                                onclick="openProgramApi('product-api')" >APIs</a>
+												</div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 sticky-menu-bar">
+                                        <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#ppm-preface" id="ppm-preface1">Overview</a><br />
+                                            <a class="overview-txt" href="#ppm-apis" id="ppm-apis1">APIs</a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0"
+                                    id="Purchase-Account-Management">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+                                            <div id="pam-preface">                                           
+										   <div class="content-seco-title-txt" >Overview</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                perform the following functions on a card account designated for
+                                                purchasing:
+                                            </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <ul>
+                                                    <li>Change the product ID.</li>
+                                                    <li>Change the store ID the purchasing card account is assigned to
+                                                        (for tracking purposes).
+                                                    </li>
+                                                    <li>Modify merchants the purchasing card can be used with.</li>
+                                                </ul>
+                                            </div>
+											</div>
+											<div id="pam-apis">
+
+                                            <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                <a class="content-seco-title-txt" href="#"
+                                                    onclick="openProgramApi('purchase-api')" >APIs </a>
+                                            </div>
+											</div>
+											<div  id="pam-sweepoff">
+
+                                            <div class="content-seco-title-txt" >Sweepoff</div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                enable daily account sweep for a given customer account.
+                                                Retrieve the current daily account sweep configuration for a given
+                                                customer.
+                                            </div>
+											</div>
+											<div  id="pam-topup">
+
+                                            <div class="content-seco-title-txt">Topup</div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Configuration set for a daily &#39;top up&#39; to reload purchasing
+                                                cards. Get
+                                                the current top up process configuration for a specific customer
+                                                account.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Methods in this topic include:
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <div class="content-header-txt">
+                                                    Purchase account management
+                                                </div>
+                                                <div>
+                                                    Perform the following functions on a card account designated for
+                                                    purchasing:
+                                                </div>
+                                                <ul>
+                                                    <li>Change the product ID.</li>
+                                                    <li>Change the store ID the purchasing card account is assigned to
+                                                        (for tracking purposes). </li>
+                                                    <li>Modify merchants the purchasing card can be used with.</li>
+
+                                                </ul>
+                                                <div>
+                                                    Use the modifyHowToIdentifyMerchants() method to modify whether the
+                                                    merchant ID or merchant description will be used for merchant
+                                                    validation at the time of the authorization transaction.
+                                                </div>
+                                                <div>
+                                                    The modifyPurchasingCard() method is used to retrieve the current
+                                                    configuration for a purchasing card account. To get the current
+                                                    configuration without any modifications, call the method without
+                                                    passing newProdId, newStoreId, or newApprovedMerchantAuthIds values.
+                                                </div>
+                                                <div class="content-header-txt">
+                                                    Modify a purchasing card
+                                                </div>
+                                                <div>
+                                                    The modifyPurchasingCard() method allows the Partner to perform the
+                                                    following functions on a card account designated for purchasing:
+                                                </div>
+                                                <ul>
+                                                    <li>Change the product ID.</li>
+                                                    <li>Change the store ID the purchasing card account is assigned to
+                                                        (for tracking purposes). See the 'Location Management' section
+                                                        of this document for help creating locations or getting a
+                                                        current recordset of locations.</li>
+                                                    <li>• Modify what merchants the purchasing card can be used with. A
+                                                        CSV list of authorization IDs is passed as the
+                                                        'newApprovedMerchantAuthIds' parameter value. The merchant ID /
+                                                        merchant description and acquirer ID are retrieved from those
+                                                        example authorizations and used as examples. The card account is
+                                                        updated to only allow transactions from those merchants.</li>
+
+                                                </ul>
+                                                <div>The modifyPurchasingCard() method can also be used to retrieve the
+                                                    current configuration for a purchasing card account. To get the
+                                                    current configuration without any modifications, call the method
+                                                    without passing newProdId, newStoreId, or newApprovedMerchantAuthIds
+                                                    values.</div>
+                                                <div>Use the modifyHowToIdentifyMerchants() method to modify whether the
+                                                    merchant ID or merchant description will be used for merchant
+                                                    validation at the time of the authorization transaction.</div>
+                                                <div class="content-header-txt">Sweepoff</div>
+                                                <div>Enable daily account sweep for a given customer account. Retrieve
+                                                    the current daily account sweep configuration for a given customer.
+                                                </div>
+                                                <div class="content-header-txt">Topup</div>
+                                                <div>Configuration set for a daily 'top up' to reload purchasing cards.
+                                                    Get the current top up process configuration for a specific customer
+                                                    account. </div>
+                                            </div>
+
+                                        </div>
+										</div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 sticky-menu-bar">
+                                        <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb">
+                                            <a class="overview-txt overview-txt-clicked" href="#pam-preface" id="pam-preface1">Overview</a><br />
+                                            <a class="overview-txt" href="#pam-apis" id="pam-apis1">APIs</a><br />
+                                            <a class="overview-txt" href="#pam-sweepoff" id="pam-sweepoff1">Sweepoff</a><br />
+                                            <a class="overview-txt" href="#pam-topup" id="pam-topup1">Topup</a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0"
+                                    id="Federal-Benefit-Enrollment">
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 content-pad-tb">
+                                         <div id="fbe-preface" >                                           
+										   <div class="content-seco-title-txt" >Overview </div>
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                Enable an account holder to receive US Federal Benefit funds via ACH
+                                                deposit to
+                                                their account. Take data inputted and queue a batch file record that
+                                                will be
+                                                sent
+                                                (typically daily) to the Fed for processing and enrollment.
+                                            </div>
+
+                                            <div class="content-discription-txt content-description-pad-left">
+                                                <div class="content-seco-title-txt">
+                                                    <mark class="mark-yellow def-txt">(Content to be filled)</mark>
+                                                </div>
+                                                <!-- <ul>
+                                                                <li>createFbEnrollment()</li>
+                                                                <li>updateFbEnrollment()</li>
+                                                                <li>getFbEnrollments()</li>
+                                                                <li>resubmitFbEnrollment()</li>
+                                                            </ul> -->
+                                            </div>
+											</div>
+											<div id="fbe-apis" >
+                                            <div class="col-md-12 col-sm-12 pad-l-r-0 mar-api-t-b">
+                                                <a class="content-seco-title-txt" href="#"
+                                                    onclick="openProgramApi('federal-api')" >APIs </a>
+                                            </div>
+											</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pad-l-r-0 sticky-menu-bar">
+                                        <div class="overview-pad-tb1" >
+										<div class="overview-pad-tb" >
+                                            <div class="overview-txt-p-b"> <a class="overview-txt overview-txt-clicked"
+                                                    href="#fbe-preface" id="fbe-preface1">Overview</a></div>
+                                            <div class="overview-txt-p-b"><a class="overview-txt"
+                                                    href="#fbe-apis" id="fbe-apis1">APIs</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 text-right">
+                                            <div class="feedback-img-right"><img src="img/Feedback Icon.svg"> <span
+                                                    class="Feedback-txt">Feedback</span></div>
+                                        </div>
+										</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+
+        <div id="ProgramAPIs" class="tab-pane fade">
+            <div class="">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-tab-padding pad-l-r-0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-l-r-0 navi-tabs">
+                        <div
+                            class="col-lg-3 col-md-3 col-sm-3 col-xs-3 tabs-padding-tb sticky-menu-bar left-sidenav-bg">
+                            <nav class="navi-tabs__nav api">
+                                <ul class="nav nav-tabs tabs-left sideways verticalnav">
+                                    <li class="dropdown active main-link" id="overview">
+                                        <a href="#overview-api" class="link">Overview
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+
+                                        </a>
+                                    </li>
+                                    <li class="dropdown main-link" id="account-select">
+                                        <a href="#account" class="account-select1 sub-nav-pad-left">Account
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-account" class="account-operation sub-link">Account
+                                                    Operations</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#create-account" class="link">Create </a></li>
+                                                    <li><a href="#create-virtual-card" class="link">Update </a></li>
+                                                    <li><a href="#void-create-account" class="link">Delete </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#force-pass-cip" class="cip-select sub-link">CIP
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#force-pass-cip" class="link">Force CIP </a></li>
+                                                    <li><a href="#run-cip" class="link">Run </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#start-enrollment" class="sub-link">Enrollment
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#start-enrollment" class="link">Start</a></li>
+                                                    <li><a href="#update-enrollment" class="link">Update</a></li>
+                                                    <li><a href="#complete-enrollment" class="link">Complete</a></li>
+                                                    <li><a href="#verify-enrollment" class="link">Verify</a></li>
+                                                    <li><a href="#run-enrollment-cip" class="link">Run</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#account-overview-acct-management" class="sub-link">Account Management
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#account-overview-acct-management" class="link">Account
+                                                            Overview</a>
+                                                    </li>
+                                                    <li><a href="#verify-acct-management" class="link">Verify
+                                                            Account</a></li>
+                                                    <li><a href="#modify-acct-management" class="link">Modify Status</a>
+                                                    </li>
+                                                    <li><a href="#get-card-acct-management" class="link">Account
+                                                            Cards</a></li>
+                                                    <li><a href="#get-carrier-list-acct-management" class="link">Carrier
+                                                            List</a>
+                                                    </li>
+                                                    <li><a href="#get-balance-acct-management" class="link">Balance</a>
+                                                    </li>
+                                                    <li><a href="#overdraft-balance-acct-management"
+                                                            class="link">Overdraft
+                                                            Balance</a>
+                                                    </li>
+                                                    <li><a href="#saving-interest-acct-management" class="link">Saving
+                                                            Interest</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#customer-id-acct-management" class="sub-link">Search
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#customer-id-acct-management" class="link">By
+                                                            CutomerId</a></li>
+                                                    <li><a href="#customer-name-acct-management" class="link">By Name,
+                                                            ZipCode
+                                                            etc.</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#fee-history-acct-management" class="sub-link">Account
+                                                    Fees
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#fee-history-acct-management" class="link">Fee
+                                                            History</a></li>
+                                                    <li><a href="#pending-fees-acct-management" class="link">Pending
+                                                            Fees</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#get-user-defined-acct-management" class="sub-link">User
+                                                    Defined Fields
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#get-user-defined-acct-management" class="link">Get</a>
+                                                    </li>
+                                                    <li><a href="#set-user-defined-acct-management" class="link">Set</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#add-customer-note-acct-management" class="sub-link">Customer
+                                                    Note
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#add-customer-note-acct-management"
+                                                            class="link">Add</a></li>
+                                                    <li><a href="#customer-note-history-acct-management"
+                                                            class="link">History</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#set-feature-acct-management" class="sub-link">Account
+                                                    Feature
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#set-feature-acct-management"
+                                                            class="link">Setaccountfeature</a>
+                                                    </li>
+                                                    <li><a href="#get-feature-acct-management"
+                                                            class="link">Getaccountfeatures</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#get-alerts-acct-management" class="sub-link">Alerts
+                                                    <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                                </a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#get-alerts-acct-management" class="link">Get</a></li>
+                                                    <li><a href="#set-alerts-acct-management" class="link">Set</a></li>
+                                                    <li><a href="#get-blackout-acct-management" class="link">Get
+                                                            Blackout</a></li>
+                                                    <li><a href="#set-blackout-acct-management" class="link">Set
+                                                            Blackout</a></li>
+                                                    <li><a href="#verify-on-demand-acct-management" class="link">Verify
+                                                            OnDemand
+                                                            Alert</a></li>
+                                                    <li><a href="#modify-on-demand-acct-management" class="link">Modify
+                                                            OnDemand
+                                                            Alert</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#card-page" class="sub-nav-pad-left" id="card-api">Card
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#add-card" class="sub-link">Card Operations</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#add-card" class="link">Add Card </a></li>
+                                                    <li><a href="#delete-card" class="link">Delete Card</a></li>
+                                                    <li><a href="#activate-card" class="link">Activate Card</a></li>
+                                                    <li><a href="#card-details" class="link">Card Details</a></li>
+                                                    <li><a href="#verify-instant-card" class="link">Verify Instant
+                                                            Card</a></li>
+                                                    <li><a href="#creating-card-image" class="link">Creating Card
+                                                            Image</a></li>
+                                                    <li><a href="#creating-card-template" class="link">Creating Card
+                                                            Template</a>
+                                                    </li>
+                                                    <li><a href="#creating-virtual-card" class="link">Creating Virtual
+                                                            Card</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#request-new-card-pin" class="sub-link">Card Pin</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#request-new-card-pin" class="link">Request New Card
+                                                            Pin</a></li>
+                                                    <li><a href="#reset-card-pin" class="link">Reset Card-Pin Fail
+                                                            Count</a></li>
+                                                    <li><a href="#card-pin-change-token" class="link">Generate Card-Pin Change
+                                                            Token</a>
+                                                    </li>
+                                                    <li><a href="#card-pin-change-request" class="link">Complete
+                                                            Card-Pin Change
+                                                            Request</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#generate-access-token" class="link">Generate
+                                                    Access
+                                                    Token</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#provisioning-request" class="link">Provisioning
+                                                    Request</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#retrive-credit-summary" class="link">Retrieve Credit
+                                                    Summary</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#setting-credit-limit" class="sub-link">Credit Limit</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#setting-credit-limit" class="link">Setting Credit
+                                                            Limit</a></li>
+                                                    <li><a href="#credit-limit-change-history" class="link">Credit Limit
+                                                            Change
+                                                            History</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-bulk-card-order" class="sub-link">Bulk Order</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#create-bulk-card-order" class="link">Creating Bulk
+                                                            Card Order</a>
+                                                    </li>
+                                                    <li><a href="#fetch-bulk-card-order" class="link">Fetch Bulk Card
+                                                            Order</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#move-card-inventory" class="link">Move Card
+                                                    Inventory</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#move-card" class="link">Move Card</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#transactions-page" id="transaction-api"
+                                            class="sub-nav-pad-left">Transactions
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#transaction-assess-fee" class="sub-link">Fee</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#transaction-assess-fee" class="link">Assess Fee</a>
+                                                    </li>
+                                                    <li><a href="#transaction-reverse-assess-fee" class="link">Reverse
+                                                            Assess Fee</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#retrieve-adjustment" class="sub-link">Adjustment</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#retrieve-adjustment" class="link">Retrieve</a></li>
+                                                    <li><a href="#reverse-adjustment" class="link">Reverse
+                                                            Adjustment</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#retrieve-payment" class="sub-link">Payment</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#retrieve-payment" class="link">Retrieve</a></li>
+                                                    <li><a href="#reverse-payment" class="link">Reverse Payment</a></li>
+                                                    <li><a href="#update-payment" class="link">Update Payment</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#doing-account-transfer" class="sub-link">Account Transfer</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#doing-account-transfer" class="link">Doing Account
+                                                            Transfer</a>
+                                                    </li>
+                                                    <li><a href="#reversing-account-transfer" class="link">Reversing
+                                                            Account
+                                                            Transfer</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#expire-authorization" class="link">Expire Authorization</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#pending-deposits" class="sub-link">Deposits</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#pending-deposits" class="link">Pending Deposits</a>
+                                                    </li>
+                                                    <li><a href="#deposit-history" class="link">Deposit History</a></li>
+                                                    <li><a href="#modify-pending-deposits" class="link">Modify Pending
+                                                            Deposit
+                                                            History</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-hold" class="sub-link">Hold</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#create-hold" class="link">Create Hold</a></li>
+                                                    <li><a href="#expire-hold" class="link">Expire Hold</a></li>
+                                                    <li><a href="#hold-history" class="link">Hold History</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#pending-merchant-credits-retrieve" class="sub-link">Pending
+                                                    Merchant
+                                                    Credits</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#pending-merchant-credits-retrieve"
+                                                            class="link">Retrieve</a></li>
+                                                    <li><a href="#pending-merchant-credits-update"
+                                                            class="link">Update</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#transaction-history" class="sub-link">History</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#transaction-history" class="link">Transaction
+                                                            History</a></li>
+                                                    <li><a href="#payment-history" class="link">Payment History</a></li>
+                                                    <li><a href="#all-trans-history" class="link">All Trans History</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#verify-sufficient-funds" class="link">Verify
+                                                    Sufficient
+                                                    Funds</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#messaging-page" class="sub-nav-pad-left" id="messaging-api">Messaging
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#add-secure-message" class="link">Add Secure
+                                                    Message</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#retrieve-secure-message" class="link">Retrieve Secure
+                                                    Message</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#location-page" class="sub-nav-pad-left" id="location-api">Locations
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-location" class="link">Create</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#modify-location" class="link">Modify</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#search-location" class="link">Search</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#product-page" class="sub-nav-pad-left" id="product-api">Product
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#product-info" class="link">Product Info</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-product-from-template" class="link">Create Product
+                                                    From Template</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#reporting-info" class="link">Reporting
+                                                    Info</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#IVR-page" class="sub-nav-pad-left" id="ivr-api">IVR
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-ivr-call" class="link">Create IVR
+                                                    Call</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#ivr-call-status" class="link">IVR Call
+                                                    Status</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#bill-payment-page" class="sub-nav-pad-left" id="bill-api">Bill
+                                            Payment
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#retrieve-biller"  class="sub-link">Biller</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#retrieve-biller" class="link">Retrieve Billers</a>
+                                                    </li>
+                                                    <li><a href="#search-biller" class="link">Search Biller</a></li>
+                                                    <li><a href="#add-rpps-biller" class="link">Add Rpps Biller</a></li>
+                                                    <li><a href="#add-paper-biller" class="link">Add Paper Biller</a>
+                                                    </li>
+                                                    <li><a href="#remove-biller" class="link">Remove Biller</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-bill-payment" class="sub-link">Bill Payment</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#create-bill-payment" class="link">Create Bill
+                                                            Payment</a></li>
+                                                    <li><a href="#cancel-bill-payment" class="link">Cancel Bill
+                                                            Payment</a></li>
+                                                    <li><a href="#retrieve-bill-pay-history" class="link">Retrieve Bill
+                                                            Pay
+                                                            History</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#ACH-accounts-page" class="sub-nav-pad-left" id="achacc-api">ACH
+                                            Accounts
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#ach-account-retrieve" class="link">Retrieve</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#ach-account-add" class="link">Add</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#ach-account-modify" class="link">Modify</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#ach-account-remove" class="link">Remove</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#ach-transaction-create" class="sub-link">Transactions</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#ach-transaction-create" class="link">Create</a></li>
+                                                    <li><a href="#ach-transaction-cancel" class="link">Cancel</a></li>
+                                                    <li><a href="#ach-transaction-history" class="link">History</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#purchasing-accounts-page" id="purchase-api"
+                                            class="sub-nav-pad-left">Purchasing Account Management
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#modify-purchasing-card" class="link">Modify
+                                                    Purchasing
+                                                    Card</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#modify-identify-merchants" class="link">Modify How To
+                                                    Identify Merchants</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#sweep-off-retrieve" class="sub-link">Sweep Off</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#sweep-off-retrieve" class="link">Retrieve</a></li>
+                                                    <li><a href="#sweep-off-set" class="link">Set</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#top-up-retrieve" class="sub-link">TopUp</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#top-up-retrieve" class="link">Retrieve</a></li>
+                                                    <li><a href="#top-up-set" class="link">Set</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#federal-benefit-enrollment-page" id="federal-api"
+                                            class="sub-nav-pad-left">Federal
+                                            Benefit Enrollment
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#federal-benefit-enrollment-create" class="link">Create</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#federal-benefit-enrollment-update" class="link">Update</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#federal-benefit-enrollment-retrieve" class="link">Retrieve</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#federal-benefit-enrollment-resubmit" class="link">ReSubmit</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown main-link">
+                                        <a href="#miscellaneous-page" class="sub-nav-pad-left">Miscellaneous
+                                            <!-- <span class="fa fa-chevron-left rotate"></span> -->
+                                        </a>
+                                        <ul class="dropdown">
+
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#miscellaneous-ping" class="link">Ping</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#miscellaneous-event-api" class="link">Event
+                                                    API</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#miscellaneous-auth-api" class="link">Auth
+                                                    API</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#miscellaneous-search-customer" class="link">Search
+                                                    Customer</a>
+                                            </li>
+                                            <li class="dropdown enrollment-dropdown">
+                                                <a href="#create-auth"  class="sub-link">Simulated
+                                                    Card</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#create-auth" class="link">Create Auth</a></li>
+                                                    <li><a href="#create-settle" class="link">Create Settle</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                              
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 pad-l-r-0">
+                            <div class="tab-content">
+                                <div class="tab-pane active">
+                                    <div class="tab-pane">
+
+                                        <!-- Overview -->
+
+                                        <div id="overview-page"></div>
+
+
+                                        <!-- Account -->
+
+                                        <div id="account"></div>
+
+
+
+                                        <!-- Card -->
+
+                                        <div id="card-page"></div>
+
+                                        <!-- Transactions -->
+
+                                        <div id="transactions-page"></div>
+
+                                        <!-- Messaging -->
+
+                                        <div id="messaging-page"></div>
+
+                                        <!-- Location -->
+
+                                        <div id="location-page"></div>
+
+                                        <!-- Product -->
+
+                                        <div id="product-page"></div>
+
+                                        <!-- IVR -->
+
+                                        <div id="IVR-page"></div>
+
+                                        <!-- bill-payment -->
+
+                                        <div id="bill-payment-page"></div>
+
+                                        <!-- ACH Accounts -->
+
+                                        <div id="ACH-accounts-page"></div>
+
+                                        <!-- Purchasing Account Management -->
+
+                                        <div id="purchasing-accounts-page"></div>
+
+                                        <!-- Federal Benefit Enrollment -->
+
+                                        <div id="federal-benefit-enrollment-page"></div>
+
+                                        <!-- Miscellaneous -->
+
+                                        <div id="miscellaneous-page"></div>
+
+                                        <!-- recipes -->
+
+                                        <div id="recipes-page"></div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <section class="footer" data-aos="zoom-in">
+        <div class=" container-width">
+
+            <div class="col-lg-own">
+                <div class="footer-title">Platform</div>
+                <div class="footer-txt">
+                    <div><a href="#">OVERVIEW</a></div>
+                    <div><a href="#">GALILEO OPEN APIS</a></div>
+                    <div><a href="#">PAYMENTS SOLUTIONS</a></div>
+                    <div><a href="#">INVESTMENT SOLUTIONS</a></div>
+                    <div><a href="#">GALILEO SANDBOX</a></div>
+                    <div><a href="#">STANDARD PLATFORM SERVICES</a></div>
+                    <div><a href="#">PREMIUM SERVICES</a></div>
+
+                </div>
+            </div>
+            <div class="col-lg-own">
+                <div class="footer-title">Use Cases</div>
+                <div class="footer-txt">
+                    <div><a href="#"> CHALLENGER BANKING</a></div>
+                    <div><a href="#"> GIG ECONOMY</a></div>
+                    <div><a href="#">LENDING</a></div>
+                    <div> <a href="#">CONSUMER PAYMENTS</a></div>
+                    <div> <a href="#">COMMERCIAL PAYMENTS</a></div>
+                    <div><a href="#"> WEALTH MANAGEMENT</a></div>
+
+                </div>
+            </div>
+            <div class="col-lg-own">
+                <div class="footer-title">Developers</div>
+                <div class="footer-txt">
+                    <div><a href="#">DASHBOARD</a></a>
+                    </div>
+                    <div><a href="#">DOCUMENTATION</a></div>
+                    <div><a href="#">SUPPORT</a></div>
+
+                </div>
+            </div>
+            <div class="col-lg-own">
+                <div class="footer-title">Pricing</div>
+                <div class="footer-txt">
+                    <div><a href="#">OVERVIEW</a></div>
+                    <div><a href="#">GALILEO SANDBOX</a></div>
+                    <div><a href="#">INSTANT ISSUING</a></div>
+                    <div><a href="#">CUSTOM SOLUTIONS</a></div>
+                    <br>
+                    <div class="footer-title">Galileo Money+</div>
+                    <div><a href="#">OVERVIEW</a></div>
+
+                </div>
+            </div>
+            <div class="col-lg-own">
+                <div class="footer-title">Company</div>
+                <div class="footer-txt">
+                    <div><a href="#">RESOURCES</a></div>
+                    <div><a href="#">OUR STORY</a></div>
+                    <div><a href="#">OUR VALUES</a></div>
+                    <div><a href="#">THE GALILEO FOUNDATION</a></div>
+                    <div><a href="#">WORKING AT GALILEO</a></div>
+                    <div><a href="#">PRIVACY DISCLOSURE</a></div>
+                    <div><a href="#">CONTACT US</a></div>
+
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-12 col-sm-12 ">
+                <div class="social-icon">
+                    <i class="fa fa-instagram"></i>
+                </div>
+                <div class="social-icon">
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <div class="social-icon twit-img">
+                    <i class="fa fa-linkedin"></i>
+                </div>
+                <div class="social-icon twit-img">
+                    <i class="fa fa-youtube-play"></i>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="copyrighth">COPYRIGHT © 2019 GALILEO PROCESSING INC.</div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+	
+
+    $(document).ready(function() {
+
+	if(window.location.href.split('#').length == 2){
+secondcheck = true
+$('.tab-content.check .tab-pane').removeClass("active")
+$(window.location.href.split(".html")[1]).addClass("active")
+$('.verticalnav-DeveloperGuide li').removeClass('active')
+$('.verticalnav-DeveloperGuide li').find('a').each(function(){
+if($(this).attr('href') ==window.location.href.split(".html")[1] )
+{
+$(this).parent().addClass('active')
+secondcheck =  false 
+}
+
+})
+if(secondcheck){
+document.getElementById('api').click()
+$('.verticalnav li').removeClass('active')
+$('.verticalnav li').removeClass('open')
+$('.verticalnav li').find('a').each(function(){
+if($(this).attr('href') ==window.location.href.split(".html")[1] )
+{
+$(this).parent().addClass('active')
+$(this).parent().addClass('opened')
+
+$('.opened > a').click(function(){
+$(this).parent().toggleClass('opened3')
+
+})
+
+
+
+
+}
+
+})
+}
+
+}
+	
+	
+	
+	
+            $('.overview-pad-tb a').on('click',function(){
+        $(this).parent().children().removeClass('overview-txt-clicked')
+        $(this).addClass('overview-txt-clicked');
+    });
+						var win      = $(window),
+    fxel     = $("body"),
+    eloffset = fxel.offset().top;
+
+win.scroll(function() {
+    if (eloffset < win.scrollTop()) {
+        fxel.addClass("fixed-side");
+    } else {
+        fxel.removeClass("fixed-side");
+    }
+});
+	})
+
+        var docMap = {
+            "#overview-page": { content: "overview.html", isLoaded: false },
+            "#account": { content: "account.html", isLoaded: false },
+            "#card-page": { content: "card.html", isLoaded: false },
+            "#transactions-page": { content: "transactions.html", isLoaded: false },
+
+            "#messaging-page": { content: "messaging.html", isLoaded: false },
+            "#location-page": { content: "locations.html", isLoaded: false },
+            "#product-page": { content: "product.html", isLoaded: false },
+            "#IVR-page": { content: "IVR.html", isLoaded: false },
+
+            "#bill-payment-page": { content: "bill-payment.html", isLoaded: false },
+            "#ACH-accounts-page": { content: "ach-accounts.html", isLoaded: false },
+            "#purchasing-accounts-page": { content: "purchasing-account-management.html", isLoaded: false },
+            "#federal-benefit-enrollment-page": { content: "federal-benefit-enrollment.html", isLoaded: false },
+            "#miscellaneous-page": { content: "miscellaneous.html", isLoaded: false },
+            "#recipes-page": { content: "recipes.html", isLoaded: false }
+        }
+
+        $(document).ready(function () {
+         
+            configDoc();
+            configProgramApi();
+
+            loadDiv("#overview-page",null, false);
+            loadDiv("#account",null);
+            loadDiv("#card-page",null);
+            loadDiv("#transactions-page",null);
+            loadDiv("#messaging-page",null);
+            loadDiv("#location-page",null);
+            loadDiv("#product-page",null);
+            loadDiv("#IVR-page",null);
+            loadDiv("#bill-payment-page",null);
+            loadDiv("#ACH-accounts-page",null);
+            loadDiv("#purchasing-accounts-page",null);
+            loadDiv("#federal-benefit-enrollment-page",null);
+            loadDiv("#miscellaneous-page",null);
+            loadDiv("#recipes-page",null);
+
+            $('nav.api > ul > li > a').click(function () {
+                var activeTab = $(this).attr("href");
+                loadDiv(activeTab, null);
+            })
+
+        });
+
+
+        function configDoc() {
+
+
+            $('.verticalnav-DeveloperGuide > li:first-child  ul').show();
+            // $(".navi-tabs__content").hide();
+            //$(".navi-tabs__content:first").show();
+
+            $('.verticalnav-DeveloperGuide .dropdown li a').click(function () {
+                $(".navi-tabs__content").hide();
+                var activeTab = $(this).attr("href");
+                $(activeTab).fadeIn();
+                $('.verticalnav-DeveloperGuide .dropdown a').removeClass('active');
+                //   $(this).addClass('active');
+            });
+
+        }
+
+
+        function loadDiv(id, callback,hide = true) {
+            var doc = docMap[id]
+            if (doc && doc.isLoaded == false) {
+                $(id).load(doc.content, null, function () {
+                    doc.isLoaded = true
+                    if (hide == true)
+                        $(id + " > div").hide()
+
+                    if(callback){
+                        callback();
+                    }
+                    // callback()
+                });
+            }
+
+        }
+
+        function openDoc(params) {
+
+            $("#docs").trigger("click")
+            $("#" + params).trigger("click")
+        }
+
+
+        // Program API script 
+
+
+        function openProgramApi(params) {
+
+            $("#api").trigger("click")
+            $("#" + params).trigger("click")
+        }
+
+
+        function configProgramApi() {
+            $('.verticalnav > li > a.sub-nav-pad-left').click(function () {
+
+                $(this).parent().toggleClass('open')
+
+                $(this).siblings().toggle();
+            });
+
+
+            $('.enrollment-dropdown > a.sub-link').click(function () {
+                $(this).parent().toggleClass('open')
+                $(this).siblings().toggle();
+
+            });
+
+            $('.link').click(function () {
+
+
+                $(".navi-tabs__content").hide();
+                var activeTab = $(this).attr("href");
+
+                $(activeTab).fadeIn();
+                $('.verticalnav .dropdown a').removeClass('active');
+
+                var parentTag = $(this).parents(".main-link")
+
+                if (parentTag.hasClass('active') == false) {
+                    parentTag.addClass('active')
+                }
+                parentTag.siblings().removeClass('active');
+
+                $(this).addClass('active');
+                $('html, body').animate({ scrollTop: 50 }, 'slow');
+            });
+            $(".rotate").click(function () {
+                $(this).toggleClass("down");
+            });
+        }
+
+    </script>
+	<script src="js/scroler-nav.js">
+
+	</script>
+
+</body>
+
+</html>
