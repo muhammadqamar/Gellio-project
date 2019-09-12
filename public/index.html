@@ -2463,7 +2463,7 @@ var ms = new MenuSpy(a);
 
 
 $('.verticalnav .main-link a.link' ).click(function(){
-//setTimeout(function(){ window.scrollTo(top) }, 1000);
+setTimeout(function(){ window.scrollTo(top) }, 0);
 
 
 
@@ -2657,7 +2657,7 @@ win.scroll(function() {
                 parentTag.siblings().removeClass('active');
 
                 $(this).addClass('active');
-                //$('html, body').animate({ scrollTop: 50 }, 'slow');
+                //$('html, body').animate({ scrollTop: 110 }, 'slow');
             });
             $(".rotate").click(function () {
               //  $(this).toggleClass("down");
